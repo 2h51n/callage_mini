@@ -1,0 +1,176 @@
+@charset "utd-8";
+
+
+a{
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+} 
+
+
+
+/* 헤더 메인 백그라운드 */
+.wrap .header-wrap .main-section{
+    width: 100%;
+    max-height: 1000px;
+    height: 80vw;
+    background: url("../img/main1.png") no-repeat center;
+    background-size: cover;
+}
+.wrap .header-wrap .main-section .menu-hover{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.wrap .header-wrap .main-section .menu-hover:hover{
+background-color: white;
+transition: background .2s, color .2s, border .2s, box-shadow .2s;
+}
+
+
+/* 헤더 메인 메뉴 */
+.header-menu > .head-menu-listWrap{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: primary-nav;
+    /* align-items: center; */
+    /* gap: .625rem 1.25rem; */
+    gap: 20px;
+}
+/* .header-menu > .head-menu-listWrap > li{
+    position: relative;
+} */
+
+/* 헤더 메인 메뉴 리스트 */
+/* .header-menu > .head-menu-listWrap > li > a > h2{
+    background-color: rgba(0, 0, 0, 0.144);
+} */
+.head-menu-listWrap li:hover{
+    background-color: white;
+    }
+.menu-hover{
+    padding: 0 40px;
+}
+.head-menu-listWrap > li{
+    margin: 30px 0;
+}
+.menu-hover:hover li > a > h2{
+    color: rgb(0, 0, 0);
+    }
+
+
+
+
+/* 헤더 서브 메뉴 리스트 */
+.subDisplay{
+    display: none;
+}
+.subDisplay:hover{
+    display: block;
+}
+.header-submenu{
+    display: flex;
+        justify-content: center;
+        gap: 85px;
+    width: 100vw;
+    padding: 10px 0;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    background-color: white;
+    text-align: left;
+    z-index: 1;
+}
+
+.header-submenu li a{
+    color: black;
+}
+.header-submenu > li > ul > li> a{
+    line-height: 2;
+    color: rgb(150, 150, 150);
+}
+.header-submenu > li > ul > li:hover> a{
+    line-height: 2;
+    color: rgb(0, 0, 0);
+}
+/* .header-submenu > li > ul{
+    display: flex;
+        flex-direction: column;
+        gap: 20px;
+} */
+
+
+.subHover{
+    position: relative;
+}
+
+/* 그래피티 */
+.graffiti:hover > .subHover::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom:-30px;
+    background-color: rgb(165, 0, 0);
+    width: 53.55px;
+    height: 3px;
+}
+.graffiti:hover > .subDisplay{
+    display: block;
+}
+
+/* 가구 */
+.furniture:hover > .subDisplay{
+    display: block;
+}
+.furniture:hover > .subHover::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom:-30px;
+    background-color: rgb(165, 0, 0);
+    width: 69.52px;
+    height: 3px;
+}
+
+/* 오브제 */
+.homewear:hover > .subDisplay{
+    display: block;
+}
+.homewear:hover > .subHover::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom:-30px;
+    background-color: rgb(165, 0, 0);
+    width: 74.09px;
+    height: 3px;
+}
+
+/* 인테리어 */
+.interior:hover > .subDisplay{
+    display: block;
+}
+.interior:hover > .subHover::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom:-30px;
+    background-color: rgb(165, 0, 0);
+    width: 107.63px;
+    height: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 헤더 메인 아이콘 */
+.header-icon > .head-icon-listWrap{
+    display: flex;
+}
