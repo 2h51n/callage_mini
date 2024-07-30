@@ -2,117 +2,112 @@
 
 /* News Section */
 .news {
-    position: absolute;
-    width: 1757px;
+    position: relative;
+    width: 100%;
     height: 681px;
-    left: 81px;
-    top: 9292px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* News Item */
+.news_item {
+    position: relative;
+    width: 33.33%; /* Adjust width for 3 images */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure no overflow */
 }
 
 /* News Image Styles */
 .news_img {
-    position: absolute;
-    width: 546.84px;
-    height: 419px;
+    width: 100%;
+    height: 419px; /* Set a fixed height for images */
     background-size: cover;
     background-position: center;
 }
 
 /* News Image 1 */
 .news_img1 {
-    left: 81px;
-    top: 9402px;
     background: url('../img/news_img1.png') no-repeat center center;
 }
 
 /* News Image 2 */
 .news_img2 {
-    left: 686.08px;
-    top: 9402px;
     background: url('../img/news_img2.png') no-repeat center center;
 }
 
 /* News Image 3 */
 .news_img3 {
-    left: 1291.16px;
-    top: 9402px;
     background: url('../img/news_img3.png') no-repeat center center;
 }
 
 /* News Scale Styles */
 .news_scale {
-    position: absolute;
-    width: 546.84px;
-    height: 571px;
+    width: 100%;
+    height: 571px; /* Set a fixed height for scales */
+    background-size: cover;
+    background-position: center;
 }
 
 /* News Scale 1 */
 .news_scale_1 {
-    left: 81px;
-    top: 9402px;
+    background: url('../img/news_scale1.png') no-repeat center center;
 }
 
 /* News Scale 2 */
 .news_scale_2 {
-    left: 686.08px;
-    top: 9402px;
+    background: url('../img/news_scale2.png') no-repeat center center;
 }
 
 /* News Scale 3 */
 .news_scale_3 {
-    left: 1291.16px;
-    top: 9402px;
+    background: url('../img/news_scale3.png') no-repeat center center;
 }
 
 /* News Text Styles */
 .news_txt {
-    position: absolute;
-    width: 429px;
-    height: 134px;
+    text-align: center;
+    padding: 10px;
 }
 
 /* News Text 1 */
 .news_txt1 {
-    left: 139px;
-    top: 9839px;
+    width: 100%;
+    height: 134px;
 }
 
 /* News Text 2 */
 .news_txt2 {
-    left: 745px;
-    top: 9839px;
+    width: 100%;
+    height: 134px;
 }
 
 /* News Text 3 */
 .news_txt3 {
-    left: 1351px;
-    top: 9839px;
-    height: 60px; /* Adjusted to fit content */
+    width: 100%;
+    height: 134px;
 }
 
 /* News Title Text */
 .news_title {
-    position: absolute;
-    width: 67px;
-    height: 27px;
-    left: 926px;
-    top: 9292px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
-    text-align: center;
     letter-spacing: 0.15em;
     color: #000000;
 }
 
 /* Lorem Ipsum Title Text */
 .lorem_title {
-    position: absolute;
-    width: 284px;
-    height: 27px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -123,10 +118,7 @@
 
 /* Lorem Ipsum Description Text */
 .lorem_description {
-    position: absolute;
-    width: 429px;
-    height: 60px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
@@ -138,10 +130,7 @@
 
 /* Read More Text */
 .read_more {
-    position: absolute;
-    width: 96px;
-    height: 20px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -154,16 +143,13 @@
 
 /* Specific Positions for Read More */
 .read_more1 {
-    left: 305px;
-    top: 9953px;
+    margin-top: 10px; /* Adjust as needed */
 }
 
 .read_more2 {
-    left: 911px;
-    top: 9953px;
+    margin-top: 10px; /* Adjust as needed */
 }
 
 .read_more3 {
-    left: 1517px;
-    top: 9953px;
+    margin-top: 10px; /* Adjust as needed */
 }
