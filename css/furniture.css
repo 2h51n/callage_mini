@@ -1,87 +1,87 @@
 @charset "utf-8";
-        /* .furniture */
-        .furniture {
-            position: relative;
-            width: 1920px;
-            height: 886px;
-            margin: 0 auto;
-            background: #E5E5E5;
-        }
-        /* .furniture_ground */
-        .furniture_ground {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-        /* furniture_bg */
-        .furniture_bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #E5E5E5;
-        }
-        /* furniture_img */
-        .furniture_img {
-            position: absolute;
-            width: 50%;
-            height: 100%;
-            background: url(../img/menu_sub1.png);
-            background-size: cover;
-        }
-        /* side_txt */
-        .side_txt {
-            position: absolute;
-            width: 40%;
-            height: 166px;
-            left: 55%;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        /* ft_link_txt */
-        .ft_link_txt {
-            position: absolute;
-            width: 100px;
-            height: 20px;
-            left: 50%;
-            top: 85%;
-            transform: translateX(-50%);
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 20px;
-            text-align: center;
-            letter-spacing: 0.09em;
-            text-decoration-line: underline;
-            color: rgba(0, 0, 0, 0.6);
-        }
-        /* ft_txt */
-        .ft_txt {
-            position: absolute;
-            width: 100%;
-            height: 50px;
-            top: 30%;
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 25px;
-            text-align: center;
-            letter-spacing: 0.09em;
-            color: #000000;
-        }
-        /* ft_title */
-        .ft_title {
-            position: absolute;
-            width: 100%;
-            height: 54px;
-            top: 0;
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 27px;
-            text-align: center;
-            letter-spacing: 0.15em;
-            color: #000000;
-        }
+/* .furniture */
+.furniture {
+  position: relative;
+  width: 100%;
+  height: 886px;
+  margin: 0 auto;
+  background: #e5e5e5;
+}
+/* .furniture_ground */
+.furniture_ground {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* furniture_bg */
+.furniture_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+}
+/* furniture_img */
+.furniture_img {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: url(../img/menu_sub1.png);
+  background-size: cover;
+}
+/* side_txt */
+.side_txt {
+  position: absolute;
+  width: 40%;
+  height: 166px;
+  left: 55%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* ft_link_txt */
+.ft_link_txt {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  left: 50%;
+  top: 85%;
+  transform: translateX(-50%);
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.6);
+}
+/* ft_txt */
+.ft_txt {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 30%;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #000000;
+}
+/* ft_title */
+.ft_title {
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  top: 0;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #000000;
+}
