@@ -16,17 +16,20 @@ a{
     height: 80vw;
     background: url("../img/main1.png") no-repeat center;
     background-size: cover;
+    z-index: -1;
 }
 .wrap .header-wrap .main-section .menu-hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.wrap .header-wrap .main-section .menu-hover{
+    transition: background .2s, color .2s, border .2s, box-shadow .2s;
+}
 .wrap .header-wrap .main-section .menu-hover:hover{
 background-color: white;
-transition: background .2s, color .2s, border .2s, box-shadow .2s;
+/* transition: background .2s, color .2s, border .2s, box-shadow .2s; */
 }
-
 
 /* 헤더 메인 메뉴 */
 .header-menu > .head-menu-listWrap{
@@ -45,6 +48,7 @@ transition: background .2s, color .2s, border .2s, box-shadow .2s;
     } */
 .menu-hover{
     padding: 0 40px;
+    letter-spacing: 0.1em;
 }
 .head-menu-listWrap > li{
     height: 73px;
@@ -62,11 +66,35 @@ transition: background .2s, color .2s, border .2s, box-shadow .2s;
 
 /* 헤더 서브 메뉴 리스트 */
 .subDisplay{
-    display: none;
+    z-index: 9;
+    opacity: 0;
+    transition: all 0.5s;
 }
-.subDisplay:hover{
+.header-menu > .head-menu-listWrap > li:hover > .subDisplay{
+    opacity: 1;
+    z-index: 99;
+}
+.header-menu > .head-menu-listWrap > li > .subHover > h2{
+    position: relative;
+}
+.header-menu > .head-menu-listWrap > li > .subHover > h2::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-30px;
+    background-color: rgb(0, 0, 0);
+    width: 0;
+    height: 3px;
+    transition: all 0.2s;
+}
+.header-menu > .head-menu-listWrap > li:hover > .subHover > h2::after{
+    width: 100%;
+}
+
+
+/* .subDisplay:hover{
     display: block;
-}
+} */
 .header-submenu{
     display: flex;
         justify-content: center;
@@ -81,6 +109,9 @@ transition: background .2s, color .2s, border .2s, box-shadow .2s;
     z-index: 1;
 }
 
+.header-submenu a{
+    letter-spacing: 0.1em;
+}
 .header-submenu >li >h4{  /* 서브 메뉴 메인 제목 */
     padding-bottom: 20px;
     font-weight: 500;
@@ -107,63 +138,31 @@ transition: background .2s, color .2s, border .2s, box-shadow .2s;
     position: relative;
 }
 
-/* 그래피티 */
-.graffiti-menu:hover > .subHover::after{
-    content: "";
+
+/* 서브메뉴 이미지 */
+.subtwinImg-w >.subtwinImg{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.sub-imgWrap{
+    width: 315px;
+    height: 196px;
+    background-color: aquamarine;
+    position: relative;
+    overflow: hidden;
+}
+.sub-imgWrap img{
+    height: 100%;
     position: absolute;
-    right: 0;
-    bottom:-30px;
-    background-color: rgb(165, 0, 0);
-    width: 53.55px;
-    height: 3px;
+    transition: all 3s cubic-bezier(0, 0, 0.9, 1);
 }
-.graffiti-menu:hover > .subDisplay{
-    display: block;
+.sub-imgWrap:hover img{
+    transform: scale(1.2);
 }
-
-/* 가구 */
-.furniture-menu:hover > .subDisplay{
-    display: block;
+.sub-imgText{
+    text-align: center;
 }
-.furniture-menu:hover > .subHover::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom:-30px;
-    background-color: rgb(165, 0, 0);
-    width: 69.52px;
-    height: 3px;
-}
-
-/* 오브제 */
-.homewear-menu:hover > .subDisplay{
-    display: block;
-}
-.homewear-menu:hover > .subHover::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom:-30px;
-    background-color: rgb(165, 0, 0);
-    width: 74.09px;
-    height: 3px;
-}
-
-/* 인테리어 */
-.interior-menu:hover > .subDisplay{
-    display: block;
-}
-.interior-menu:hover > .subHover::after{
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom:-30px;
-    background-color: rgb(165, 0, 0);
-    width: 107.63px;
-    height: 3px;
-}
-
-
 
 
 
@@ -181,4 +180,19 @@ transition: background .2s, color .2s, border .2s, box-shadow .2s;
     display: flex;
     gap: 20px;
     color: white;
+}
+
+/* 메인 로고 */
+.main-logo{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main-logo img{
+    width: 40%;
+    position: absolute;
+    top: calc(50% - 90px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(1px 1px 2px #00000042);
 }
