@@ -2,24 +2,25 @@
 
 /* .brand_copy */
 .brand_copy {
-    position: relative;
-    width: 1920px;
-    height: 373px;
-    background: #F1F1F1;
-    margin: 0 auto; /* 가로 중앙 정렬 */
+  position: relative;
+  width: 100%;
+  height: 373px;
+  background: #f1f1f1;
+  margin: 0 auto; /* 가로 중앙 정렬 */
 }
 
 /* .brand_text */
 .brand_text {
-    position: absolute;
-    width: 1799px;
-    height: 136px;
-    left: 60px;
-    top: 60px; /* 상단에 여백 추가 */
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 136px;
+  left: 60px;
+  top: 60px; /* 상단에 여백 추가 */
+  text-align: center;
 }
 
 /* Brand text paragraph */
+
 .brand_text > p {
     position: absolute;
     width: 100%;
@@ -33,39 +34,40 @@
     letter-spacing: 0.15em;
     color: #000000;
     margin: 0; /* 상하 여백 제거 */
+
 }
 
 /* .about */
 .about {
-    position: absolute;
-    width: 56px;
-    height: 20px;
-    left: 879px;
-    top: 130px; /* 상단 위치 조정 */
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: right;
-    letter-spacing: 0.09em;
-    text-decoration-line: underline;
-    color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  top: 130px; /* 상단 위치 조정 */
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: 0.09em;
+  text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 /* .contacts */
 .contacts {
-    position: absolute;
-    width: 88px;
-    height: 20px;
-    left: 949px;
-    top: 130px; /* 상단 위치 조정 */
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    letter-spacing: 0.09em;
-    text-decoration-line: underline;
-    color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  top: 130px; /* 상단 위치 조정 */
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.09em;
+  text-decoration-line: underline;
+  color: rgba(0, 0, 0, 0.6);
 }
