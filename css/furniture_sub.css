@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* .furniture_sub */
+.furniture_sub {
+    position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
+    width: 1920px;
+    height: 577px;
+    background: #F1F1F1;
+    margin: 0 auto; /* 가로 중앙 정렬 */
+}
+
+/* .furniture_sub_info */
+.furniture_sub_info {
+    position: absolute;
+    width: 762px;
+    height: 166px;
+    left: 50%;
+    top: 20%; /* 상단 위치 조정 */
+    transform: translateX(-50%); /* 수평 중앙 정렬 */
+    text-align: center;
+}
+
+/* Shared text styles */
+.op_int_txt {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.09em;
+    text-decoration-line: underline;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.op_bk_s_txt {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.09em;
+    color: #000000;
+}
+
+.op_m_txt {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+/* .furniture_sub_title */
+.furniture_sub_title {
+    position: absolute;
+    width: 146px;
+    height: 27px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%); /* 수평 중앙 정렬 */
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    color: #000000;
+}
+
+/* .furniture_sub_txt */
+.furniture_sub_txt {
+    position: absolute;
+    width: 762px;
+    height: 50px;
+    left: 50%;
+    top: 60px; /* 상단 위치 조정 */
+    transform: translateX(-50%); /* 수평 중앙 정렬 */
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0.09em;
+    color: #000000;
+}
+
+/* .furniture_sub_link_txt */
+.furniture_sub_link_txt {
+    position: absolute;
+    width: 152px;
+    height: 20px;
+    left: 50%;
+    top: 130px; /* 상단 위치 조정 */
+    transform: translateX(-50%); /* 수평 중앙 정렬 */
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-decoration-line: underline;
+    color: rgba(0, 0, 0, 0.6);
+}
