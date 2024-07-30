@@ -20,7 +20,7 @@
 }
 
 /* Brand text paragraph */
-.brand_text p {
+.brand_text > p {
     position: absolute;
     width: 100%;
     height: 72px;
