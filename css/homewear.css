@@ -1,163 +1,167 @@
 @charset "utf-8";
 /* Homewear Section */
 .homewear {
-    position: relative;
-    width: 1920px;
-    height: 1455px;
-    background: #FFFFFF;
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 1455px;
+  background: #ffffff;
+  margin: 0 auto;
+  overflow: hidden; /* Ensure that all absolutely positioned elements stay within the section */
 }
 
 /* Homewear Background */
 .homewear_bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #FFFFFF;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flip horizontally */
 }
 
 /* Homewear Inner */
 .homewear_inner {
-    position: absolute;
-    width: 1596px;
-    height: 1142px;
-    left: 50%;
-    top: 20px; /* Adjust this value to place it above the images */
-    transform: translateX(-50%);
-    z-index: 2; /* Ensure it is in front of homewear_bg */
+  position: absolute;
+  width: 100%;
+  height: 1142px;
+  left: 50%;
+  top: 20px; /* Adjust if needed */
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-/* Homewear Image */
-.homewear_img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-/* Homewear Image */
-.homewear_img1, .homewear_img2, .homewear_img3 {
-    background-size: cover;
-    background-position: center;
-    position: absolute;
+/* Homewear Image Containers */
+.homewear_img1,
+.homewear_img2,
+.homewear_img3 {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
 }
 
 .homewear_img1 {
-    width: 356px;
-    height: 607px;
-    left: 38%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: url('../img/homewear_img1.png');
+  width: 356px;
+  height: 607px;
+  left: 16%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/homewear_img1.png");
 }
 
 .homewear_img2 {
-    width: 356px;
-    height: 607px;
-    left: 16%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: url('../img/homewear_img2.png');
+  width: 356px;
+  height: 607px;
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/homewear_img2.png");
 }
 
 .homewear_img3 {
-    width: 773px;
-    height: 1142px;
-    left: 51%;
-    top: 7%;
-    transform: translate(0%, 0%);
-    background: url('../img/homewear_img3.png');
-}
-/* Homewear Link Text */
-.homewear_link_txt {
-    position: absolute;
-    width: 96px;
-    height: 20px;
-    left: calc(50% - 48px); /* Center horizontally with respect to homewear_inner */
-    top: 250px; /* Adjust the top value as needed */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.09em;
-    text-decoration-line: underline;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 3; /* Ensure it is above other content */
+  width: 773px;
+  height: 1142px;
+  left: 51%;
+  top: 7%;
+  background: url("../img/homewear_img3.png");
 }
 
+.homewear_txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
 /* Homewear Link Text */
 .homewear_link_txt {
-    position: absolute;
-    width: 96px;
-    height: 20px;
-    left: calc(50% - 48px); /* Center horizontally within homewear_inner */
-    top: 20px; /* Adjust the top value as needed */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 0.09em;
-    text-decoration-line: underline;
-    color: rgba(0, 0, 0, 0.6);
-    z-index: 3; /* Ensure it is above other content */
+  position: absolute;
+  width: 96px;
+  height: 20px;
+  left: 50%;
+  top: 250px; /* Adjust the top value as needed */
+  transform: translateX(-50%);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
 }
 
 /* Homewear Main Text */
 .homewear_main_txt {
-    position: absolute;
-    width: 762px;
-    height: 75px;
-    left: calc(50% - 381px); /* Center horizontally within homewear_inner */
-    top: 100px; /* Adjust the top value as needed */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
-    letter-spacing: 0.09em;
-    color: #000000;
-    z-index: 3; /* Ensure it is above other content */
+  position: absolute;
+  width: 762px;
+  height: 75px;
+  left: 50%;
+  top: 100px; /* Adjust the top value as needed */
+  transform: translateX(-50%);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #000000;
+  z-index: 3;
 }
 
 /* Homewear Sub Title */
 .homewear_sub_title {
-    position: absolute;
-    width: 250px;
-    height: 27px;
-    left: calc(70%); /* Center horizontally within homewear_inner */
-    top: 170px; /* Adjust the top value as needed */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.15em;
-    color: #000000;
-    z-index: 3; /* Ensure it is above other content */
+  position: absolute;
+  width: 250px;
+  height: 27px;
+  left: 50%;
+  top: 170px; /* Adjust the top value as needed */
+  transform: translateX(-50%);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #000000;
+  z-index: 3;
 }
 
 /* Homewear Title */
 .homewear_title {
-    position: absolute;
-    width: 151px;
-    height: 27px;
-    left: calc(73%); /* Center horizontally within homewear_inner */
-    top: 100px; /* Adjust the top value as needed */
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.15em;
-    color: #000000;
-    z-index: 3; /* Ensure it is above other content */
+  position: absolute;
+  width: 151px;
+  height: 27px;
+  left: 50%;
+  top: 100px; /* Adjust the top value as needed */
+  transform: translateX(-50%);
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #000000;
+  z-index: 3;
+}
+
+/* Divider Lines */
+.divider_line_b,
+.divider_line_h {
+  position: absolute;
+  width: 100%;
+  border: 2px solid #000000;
+}
+
+.divider_line_b {
+  height: 0;
+  top: 8755px; /* Adjust the top value if needed */
+}
+
+.divider_line_h {
+  height: 0;
+  top: 7466px; /* Adjust the top value if needed */
 }
