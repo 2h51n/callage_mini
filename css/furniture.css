@@ -1,87 +1,74 @@
 @charset "utf-8";
 /* .furniture */
 .furniture {
-  position: relative;
   width: 100%;
-  height: 886px;
-  margin: 0 auto;
-  background: #e5e5e5;
-}
-/* .furniture_ground */
-.furniture_ground {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  max-height: 1000px;
+  height: 80vw;
+  background: #E5E5E5;
 }
 /* furniture_bg */
-.furniture_bg {
-  position: absolute;
+.furniture-wrap{
   width: 100%;
   height: 100%;
-  background: #e5e5e5;
+  display: flex;
 }
-/* furniture_img */
-.furniture_img {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  background: url(../img/menu_sub1.png);
+/* 가구 이미지 구역 */
+.furniture-img-wrap {
+  width: 100%;
+  /* background-color: aqua; */
+  overflow: hidden;
+  background: url("../img/menu_sub1.png") no-repeat center;
   background-size: cover;
 }
-/* side_txt */
-.side_txt {
-  position: absolute;
-  width: 40%;
-  height: 166px;
-  left: 55%;
-  top: 50%;
-  transform: translateY(-50%);
+/* 가구 택스트 구역 */
+.furniture-text-wrap {
+  /* background-color: rgb(255, 255, 255); */
+  width: 100%;
+  text-align: center;
+  display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  gap: 30px;
 }
 /* ft_link_txt */
-.ft_link_txt {
-  position: absolute;
-  width: 100px;
-  height: 20px;
-  left: 50%;
-  top: 85%;
-  transform: translateX(-50%);
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  text-align: center;
-  letter-spacing: 0.09em;
-  text-decoration-line: underline;
-  color: rgba(0, 0, 0, 0.6);
-}
-/* ft_txt */
-.ft_txt {
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  top: 30%;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  letter-spacing: 0.09em;
-  color: #000000;
-}
-/* ft_title */
-.ft_title {
-  position: absolute;
-  width: 100%;
-  height: 54px;
-  top: 0;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
+.furniture-text-wrap h2{
   font-size: 20px;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.15em;
-  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.15em
+}
+.furniture-text-wrap p{
+  width: 80%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.09em;
+}
+.furniture_link_txt {
+  display: inline-block; /* Ensure padding and background size are applied correctly */
+  color: rgba(0, 0, 0, 0.6); /* Text color */
+  text-decoration: none; /* 기본 상태에서 밑줄을 제거 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
+  transition: background-size 0.3s ease-in-out; /* 부드러운 배경 사이즈 변화 */
+  padding: 5px 0; /* 수직 패딩으로 링크와 텍스트의 간격 조정 */
+}
+
+/* 링크에 커서를 올렸을 때 밑줄 효과 */
+.furniture_link_txt:hover {
+  background-size: 0 1px; /* 밑줄의 크기를 0으로 설정하여 사라지게 함 */
+}
+
+@media (max-width: 768px) {
+  .brand-history{
+      height: 100vw;
+  }
+  .history-wrap {
+      flex-direction: column;
+  }
+  .history-img-wrap{
+      height: 100%;
+  }
+  .history-text-wrap{
+      height: 100%;
+  }
 }
