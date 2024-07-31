@@ -149,46 +149,28 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* .divider.line */
-.divider.line {
-  position: relative;
-  width: 100%;
-  height: 1455px;
-  background: #ffffff;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-/* .divider.line_b */
+/* Divider Lines */
+.divider.line_h,
 .divider.line_b {
   position: absolute;
   width: 0;
   height: 1px;
-  bottom: 30px;
-  left: 50%;
-  border: 1px solid #000000;
+  background: #000000;
   transform: translateX(-50%);
-  animation: growLineFromCenter 2s ease-out forwards;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Smooth fade-in/fade-out */
 }
 
-/* .divider.line_h */
+/* Top Divider Line */
 .divider.line_h {
-  position: absolute;
-  width: 0;
-  height: 1px;
   top: 30px;
   left: 50%;
   border: 1px solid #000000;
-  transform: translateX(-50%);
-  animation: growLineFromCenter 2s ease-out forwards;
 }
 
-/* Line Animation */
-@keyframes growLineFromCenter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+/* Bottom Divider Line */
+.divider.line_b {
+  bottom: 30px;
+  left: 50%;
+  border: 1px solid #000000;
 }
