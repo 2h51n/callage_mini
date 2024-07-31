@@ -1,0 +1,36 @@
+@charset "utf-8";
+.bottom-menu-section{
+    width: 100%;
+    height: 50vw;
+}
+.bottom-menu-nav{
+    height: 60%;
+    display: flex;
+        justify-content: center;
+        align-items: center
+}
+.bottom-menu-nav > ul{
+    width: 80%;
+    display: flex;
+    gap: 3%;
+}
+.bottom-menu-nav > ul >li{
+    width: calc(100% /4);
+}
+
+/* 메뉴 폰트 크기 */
+.bottom-menu-nav > ul >li > a >h1{
+    padding-top: 22px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+}
+.b-menu-wrap{
+    width: 100%;
+    height: 25vw;
+}
+.b-menu-wrap img{
+    height: 100%;
+}
