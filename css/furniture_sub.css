@@ -86,17 +86,22 @@
 
 /* .furniture_sub_link_txt */
 .furniture_sub_link_txt {
-  position: relative;
-  width: auto;
-  margin: 20px auto;
-  font-size: 15px;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  font-size: 15px;
   line-height: 20px;
-  text-align: center;
   letter-spacing: 0.09em;
-  text-decoration-line: underline;
   color: rgba(0, 0, 0, 0.6);
+  text-decoration: none; /* 기본 상태에서 밑줄을 제거 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화의 부드러운 전환 효과 */
+  padding: 5px 0; /* 수직 패딩으로 링크와 텍스트의 간격을 조정 */
 }
+.furniture_sub_link_txt:hover{
+  background-size: 0 1px; /* 밑줄의 크기를 0으로 설정하여 사라지게 함 */
+}
+
 
 /* Media Queries for responsiveness */
 
