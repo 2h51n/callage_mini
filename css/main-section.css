@@ -25,6 +25,8 @@ a {
   background-color: white;
   /* transition: background .2s, color .2s, border .2s, box-shadow .2s; */
 }
+
+
 /* 헤더 메인 메뉴 */
 .header-menu > .head-menu-listWrap {
   text-align: center;
@@ -39,6 +41,8 @@ a {
 /* .head-menu-listWrap li:hover{
     background-color: white;
     } */
+
+
 .menu-hover {
   padding: 0 40px;
   letter-spacing: 0.1em;
@@ -148,15 +152,16 @@ a {
 .sub-imgText {
   text-align: center;
 }
+
 /* 헤더 메인 아이콘 */
 .header-icon {
   display: flex;
   align-items: center;
 }
-.header-icon > .head-icon-listWrap {
-  display: flex;
-  gap: 20px;
-  color: white;
+.header-icon > .head-icon-listWrap{
+    display: flex;
+    gap: 20px;
+    color: white;
 }
 /* 메인 로고 */
 .main-logo {
