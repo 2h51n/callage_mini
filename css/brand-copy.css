@@ -1,73 +1,108 @@
 @charset "utf-8";
+/* Base styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* .brand_copy */
 .brand_copy {
   position: relative;
   width: 100%;
-  height: 373px;
+  height: auto;
   background: #f1f1f1;
-  margin: 0 auto; /* 가로 중앙 정렬 */
+  overflow: hidden; /* 배경 이미지가 부모 컨테이너를 넘지 않도록 함 */
+  margin: 0 auto;
 }
 
-/* .brand_text */
+/* 배경 이미지 */
+.brand_copy_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 0; /* 배경 이미지가 텍스트 뒤에 위치하도록 함 */
+}
+
+/* 브랜드 텍스트 */
 .brand_text {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 136px;
-  left: 60px;
-  top: 60px; /* 상단에 여백 추가 */
+  max-width: 1962px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
+  color: #000000;
+  z-index: 1; /* 텍스트가 배경 이미지 위에 위치하도록 함 */
 }
 
-/* Brand text paragraph */
-
+/* 설명 텍스트 */
 .brand_text > p {
-    position: absolute;
-    width: 100%;
-    height: 72px;
-    top: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 34px;
-    letter-spacing: 0.15em;
-    color: #000000;
-    margin: 0; /* 상하 여백 제거 */
-
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.15em;
+  color: #000000;
 }
 
-/* .about */
-.about {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  text-align: center;
-  top: 130px; /* 상단 위치 조정 */
+/* 'ABOUT' 링크 */
+.about_text,
+.contacts  {
+  display: inline-block;
   font-family: "Open Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  text-align: right;
-  letter-spacing: 0.09em;
-  text-decoration-line: underline;
+  letter-spacing: 0.10em;
   color: rgba(0, 0, 0, 0.6);
+  text-decoration: none; /* 기본 상태에서 밑줄을 제거 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화의 부드러운 전환 효과 */
+  padding: 5px 0; /* 수직 패딩으로 링크와 텍스트의 간격을 조정 */
+}
+.about_text:hover,
+.contacts:hover{
+  background-size: 0 1px; /* 밑줄의 크기를 0으로 설정하여 사라지게 함 */
 }
 
-/* .contacts */
-.contacts {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  text-align: center;
-  top: 130px; /* 상단 위치 조정 */
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0.09em;
-  text-decoration-line: underline;
-  color: rgba(0, 0, 0, 0.6);
+/* Media Queries for responsiveness */
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .brand_text {
+    padding: 10px;
+  }
+
+  .brand_text > p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .about,
+  .contacts {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .brand_text {
+    padding: 5px;
+  }
+
+  .brand_text > p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .about,
+  .contacts {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }

@@ -22,6 +22,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Ensure no overflow */
+    padding: 20px;
 }
 
 /* News Image Styles */
@@ -50,7 +51,7 @@
 /* News Scale Styles */
 .news_scale {
     width: 100%;
-    height: 571px; /* Set a fixed height for scales */
+    height: auto; /* Set a fixed height for scales */
     background-size: cover;
     background-position: center;
 }
@@ -105,8 +106,8 @@
     color: #000000;
 }
 
-/* Lorem Ipsum Title Text */
-.lorem_title {
+/* news Ipsum Title Text */
+.news_title {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -116,8 +117,8 @@
     color: #000000;
 }
 
-/* Lorem Ipsum Description Text */
-.lorem_description {
+/* news Ipsum Description Text */
+.news_description {
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -144,12 +145,15 @@
 /* Specific Positions for Read More */
 .read_more1 {
     margin-top: 10px; /* Adjust as needed */
+    color: #666666;
 }
 
 .read_more2 {
     margin-top: 10px; /* Adjust as needed */
+    color: #666666;
 }
 
 .read_more3 {
     margin-top: 10px; /* Adjust as needed */
+    color: #666666;
 }
