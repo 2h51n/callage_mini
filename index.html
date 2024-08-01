@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <!-- <link rel="manifest" href="images/favicon/site.webmanifest" /> -->
     <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5BBAD5" />
     <meta name="msapplication-TileColor" content="#DA532C" />
     <meta name="theme-color" content="#FFFFFF" />
@@ -115,7 +115,8 @@
                   </div>
                 </li>
                 <li class="homewear-menu">
-                  <a href="#" class="subHover"><h2>HOMEWEAR</h2></a><!-- 오브제 -->
+                  <a href="#" class="subHover"><h2>HOMEWEAR</h2></a
+                  ><!-- 오브제 -->
                   <div class="subDisplay">
                     <ul class="header-submenu">
                       <li class="subtwinImg-w">
@@ -154,7 +155,8 @@
                   </div>
                 </li>
                 <li class="interior-menu">
-                  <a href="#" class="subHover"><h2>INTERIOR DESIGN</h2></a><!-- 인테리어 디자인 -->
+                  <a href="#" class="subHover"><h2>INTERIOR DESIGN</h2></a
+                  ><!-- 인테리어 디자인 -->
                   <div class="subDisplay">
                     <ul class="header-submenu">
                       <li>
@@ -352,29 +354,36 @@
         </div>
         <!-- .homewear 섹션 -->
         <div class="homewear">
-          <!-- 구분선 상단 -->
-          <div class="divider line_h"></div>
-          <div class="homewear_inner">
-            <!-- 텍스트와 배경 이미지 -->
-            <div class="homewear_txt">
-              <!-- 제목 -->
-              <div class="homewear_title">HOME WEAR</div>
-              <!-- 서브 제목 -->
-              <div class="homewear_sub_title">NEUTRAL PALETTE</div>
-              <!-- 주요 텍스트 -->
-              <div class="homewear_main_txt">Loud lines meet generous shapes and relaxed fits, with a neutral palette of flint and chalky lines, pieces can be paired or layered without shouting. Build your own set or suit from a capsule of separates.</div>
-              <!-- 링크 텍스트 -->
-              <div class="homewear_link_txt">READ MORE</div>
-            </div>
-            <!-- 배경 이미지들 -->
-            <div class="homewear_bg">
-              <div class="homewear_img1"></div>
-              <div class="homewear_img2"></div>
-              <div class="homewear_img3"></div>
+          <div class="focusLine"></div>
+          <div class="colorinterior">
+            <div class="swiper colorSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="colorSwiper-mainImg">
+                    <img src="img/homewear_img1.png" alt="homewear_img1" />
+                  </div>
+                  <div class="colorSwiper-contents">
+                    <div class="colorSwiper-subText">
+                      <h2>HOME WEAR</h2>
+                      <h2>NEUTRAL PALETTE</h2>
+                      <p>Loud lines meet generous shapes and relaxed fits, with a neutral palette of flint and chalky lines, pieces can be paired or layered without shouting. Build your own set or suit from a capsule of separates.</p>
+                      <a href="#">READ MORE</a>
+                    </div>
+                    <div class="colorSwiper-subImg">
+                      <div class="cssi-1">
+                        <img src="img/homewear_img2.png" alt="컬러 슬라이드 서브 이미지1" />
+                      </div>
+                      <div class="cssi-2">
+                        <img src="img/homewear_img3.png" alt="컬러 슬라이드 서브 이미지2" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <!-- 구분선 하단 -->
-          <div class="divider line_b"></div>
+          <div class="focusLine"></div>
         </div>
         <!-- .brand_copy 섹션 -->
         <div class="brand_copy">
@@ -385,7 +394,7 @@
             <!-- 설명 텍스트 -->
             <p>CALLAGE CREATES TIMELESS WORKS OF UNCONVENTIONAL DESIGN. OUR APPROACH UNITES THE ARTISTIC WITH THE EVERYDAY TO MAKE THE LANDSCAPE OF OUR LIVES LESS ORDINARY.</p>
             <!-- 'ABOUT' 링크 -->
-            <div class="about">ABOUT</div>
+            <div class="about_text">ABOUT</div>
             <!-- 'CONTACTS' 링크 -->
             <div class="contacts">CONTACTS</div>
           </div>
@@ -398,8 +407,8 @@
             <div class="news_img news_img1"></div>
             <!-- 뉴스 텍스트 1 -->
             <div class="news_txt news_txt1">
-              <h3 class="lorem_title">Lorem Ipsum is simply</h3>
-              <p class="lorem_description">A collaboration between FRAMA and designer Faye Toogood’s London studio. With a shared reverence for creative process and distinct design.</p>
+              <h3 class="news_title">TOOGOOD X FRAMA</h3>
+              <p class="news_description">A collaboration between FRAMA and designer Faye Toogood’s London studio. With a shared reverence for creative process and distinct design.</p>
               <div class="read_more read_more1">READ MORE</div>
             </div>
           </div>
@@ -409,8 +418,8 @@
             <div class="news_img news_img2"></div>
             <!-- 뉴스 텍스트 2 -->
             <div class="news_txt news_txt2">
-              <h3 class="lorem_title">Lorem Ipsum is simply</h3>
-              <p class="lorem_description">A collaboration between FRAMA and designer Faye Toogood’s London studio. With a shared reverence for creative process and distinct design.</p>
+              <h3 class="news_title">ASSEMBLAGE 8: GUMMY</h3>
+              <p class="news_description">“I wanted to create a chair with a lot of personality, that could sit at home in any interior – historical, grand, modern or homely."</p>
               <div class="read_more read_more2">READ MORE</div>
             </div>
           </div>
@@ -420,8 +429,8 @@
             <div class="news_img news_img3"></div>
             <!-- 뉴스 텍스트 3 -->
             <div class="news_txt news_txt3">
-              <h3 class="lorem_title">Lorem Ipsum is simply</h3>
-              <p class="lorem_description">A collaboration between FRAMA and designer Faye Toogood’s London studio. With a shared reverence for creative process and distinct design.</p>
+              <h3 class="news_title">COLLECTION 020 S/S</h3>
+              <p class="news_description">"I have been thinking a lot about the artist Philip Guston. His colours, his mark-making yes – but mostly his attitude. "</p>
               <div class="read_more read_more3">READ MORE</div>
             </div>
           </div>

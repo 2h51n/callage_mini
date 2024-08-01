@@ -1,176 +1,177 @@
 @charset "utf-8";
-/* Homewear Section */
-.homewear {
-  position: relative;
-  width: 100%;
-  height: 1455px;
-  background: #ffffff;
-  margin: 0 auto;
-  overflow: hidden; /* Ensure that all absolutely positioned elements stay within the section */
+/* Base styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Homewear Background */
-.homewear_bg {
-  position: absolute;
+/* .homewear */
+.homewear {
+  width: 100%;
+}
+
+/* 스와이퍼 구역 */
+.colorinterior {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* 스와이퍼 */
+.colorSwiper {
   width: 100%;
   height: 100%;
-  margin: auto 0;
-  background: #ffffff;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flip horizontally */
-  background-size: cover;
-  background-position: center;
 }
 
-/* Homewear Inner */
-.homewear_inner {
-  position: absolute;
+/* 슬라이드 세션 */
+.colorSwiper > .swiper-wrapper > .swiper-slide {
   width: 100%;
-  height: 1142px;
-  left: 50%;
-  top: 20px; /* Adjust if needed */
-  transform: translateX(-50%);
-  z-index: 2;
-  gap: 10px; /* 이미지 간의 간격 */
-  padding: 20px 0;
+  height: auto; /* 컨텐츠에 맞춰 높이 조정 */
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  overflow: hidden;
 }
 
-/* Homewear Image Containers */
-.homewear_img1,
-.homewear_img2,
-.homewear_img3 {
-  position: absolute;
-  background-size: cover;
-  background-position: center;
+/* 메인 이미지 */
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
+  width: 100%;
+  height: auto; /* 컨텐츠에 맞춰 높이 조정 */
+}
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg > img {
+  width: 100%;
+  height: auto; /* 비율 유지 */
 }
 
-.homewear_img1 {
-  width: 356px;
-  height: 607px;
-  left: 16%;
-  top: calc(50% + 50px);
-  transform: translate(-50%, -50%);
-  background: url("../img/homewear_img1.png");
+/* 서브 이미지 구역 */
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 4%;
 }
 
-.homewear_img2 {
-  width: 356px;
-  height: 607px;
-  left: 38%;
-  top: calc(50% + 50px);
-  transform: translate(-50%, -50%);
-  background: url("../img/homewear_img2.png");
+/* 설명 및 서브 이미지 구역 */
+.colorSwiper-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6%;
+  width: 100%;
 }
 
-.homewear_img3 {
-  width: 773px;
-  height: 1142px;
-  left: 51%;
-  top: 7%;
-  background: url("../img/homewear_img3.png");
-}
-
-/* Homewear Text Container */
-.homewear_txt {
-  position: absolute;
-  top: 5%; /* Adjust this value to position the container correctly */
-  left: 73%;
-  transform: translateX(-50%);
+/* 설명(텍스트) */
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
   text-align: center;
-  z-index: 3;
 }
-
-/* Homewear Title */
-.homewear_title {
-  position: relative;
-  width: 171px;
-  height: 27px;
-  margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
+.colorSwiper-subText > h2 {
   font-size: 20px;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.15em;
-  color: #000000;
-  margin-bottom: 10px; /* Space between title and subtitle */
-}
-
-/* Homewear Sub Title */
-.homewear_sub_title {
-  position: relative;
-  width: 280px;
-  height: 27px;
-  margin: 0 auto;
-  margin-top: 50px;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  text-align: center;
-  letter-spacing: 0.15em;
-  color: #000000;
-  margin-bottom: 20px; /* Space between subtitle and main text */
+  letter-spacing: 0.15rem;
 }
-
-/* Homewear Main Text */
-.homewear_main_txt {
-  position: relative;
-  width: 780px;
-  height: 75px;
-  margin: 0 auto;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  letter-spacing: 0.09em;
-  color: #000000;
-  margin-bottom: 30px; /* Space between main text and link text */
-}
-
-/* Homewear Link Text */
-.homewear_link_txt {
-  position: relative;
-  width: 150px;
-  height: 20px;
-  margin: 0 auto;
-  margin-top: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+.colorSwiper-subText > p {
   font-size: 15px;
-  line-height: 20px;
-  text-align: center;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0.09em;
+}
+.colorSwiper-subText > a {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
   letter-spacing: 0.09em;
   text-decoration: underline;
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* Divider Lines */
-.divider.line_h,
-.divider.line_b {
-  position: absolute;
+/* 서브 이미지1 */
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-1 {
+  width: 50%;
+}
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-1 img {
+  width: 100%;
+  height: auto; /* 비율 유지 */
+}
+
+/* 서브 이미지2 */
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-2 {
+  width: 50%;
+}
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-2 img {
+  width: 100%;
+  height: auto; /* 비율 유지 */
+}
+
+/* 포커스 라인 */
+.focusLine {
   width: 0;
-  height: 1px;
-  background: #000000;
-  transform: translateX(-50%);
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.5s ease; /* Smooth fade-in/fade-out */
+  margin: 2% auto;
+  height: 2px;
+  background-color: black;
+  transition: all 1s;
+}
+.focusLine.active {
+  width: 90%;
+  margin: 2% auto;
+  height: 2px;
 }
 
-/* Top Divider Line */
-.divider.line_h {
-  top: 30px;
-  left: 50%;
-  border: 1px solid #000000;
+/* Media Queries for responsiveness */
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .colorinterior {
+    width: 90%;
+    height: auto; /* 비율에 맞춰 높이 조정 */
+  }
+
+  .colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
+    height: auto; /* 비율에 맞춰 높이 조정 */
+  }
+
+  .colorSwiper-subText > h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .colorSwiper-subText > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .colorSwiper-subText > a {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
-/* Bottom Divider Line */
-.divider.line_b {
-  bottom: 30px;
-  left: 50%;
-  border: 1px solid #000000;
+/* Mobile view */
+@media (max-width: 480px) {
+  .colorinterior {
+    width: 100%;
+    height: auto; /* 비율에 맞춰 높이 조정 */
+  }
+
+  .colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
+    height: auto; /* 비율에 맞춰 높이 조정 */
+  }
+
+  .colorSwiper-subText > h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .colorSwiper-subText > p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .colorSwiper-subText > a {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
