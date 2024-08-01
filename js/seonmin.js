@@ -4,23 +4,49 @@ window.onload = function(){
     const subMenu = document.querySelector(".header-submenu");
     mainMenu.addEventListener("click", function(){
         subMenu.classList.toggle("hovering")
-    })
-}
-
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+    });
 
 
-  
+    // 메뉴 1 슬라이드 영역
+    const menu1 = new Swiper(".colorSwiper", {
+        slidesPerView: 1,
+        grid: {
+            rows: 1,
+            fill: "row",
+        },
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+
+
+    // 메뉴 2 슬라이드 영역
+    const menu2 = new Swiper(".menu-2Img-wrap", {
+        slidesPerView: 1,
+        grid: {
+            rows: 1,
+            fill: "row",
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+};
+
+
+
+
+
+
+
 $(document).ready(function() {
   // 클래스가 "scroll_on"인 모든 요소를 선택합니다.
   const $counters = $(".focusLine");
-  
   // 노출 비율(%)과 애니메이션 반복 여부(true/false)를 설정합니다.
   const exposurePercentage = 100; // ex) 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라갑니다.
   const loop = true; // 애니메이션 반복 여부를 설정합니다. (true로 설정할 경우, 요소가 화면에서 사라질 때 다시 숨겨집니다.)
