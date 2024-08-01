@@ -1,8 +1,8 @@
 @charset "utf-8";
 .menu-1{
     width: 100%;
-    max-height: 1000px;
-    height: 80vw;
+    /* max-height: 1000px;
+    height: 80vw; */
 }
 /* 스와이퍼 구역 */
 .colorinterior{
