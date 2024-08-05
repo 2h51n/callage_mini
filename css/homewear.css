@@ -1,11 +1,4 @@
 @charset "utf-8";
-/* Base styles for all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* .homewear */
 .homewear {
   width: 100%;
@@ -89,19 +82,19 @@
 }
 
 /* 서브 이미지1 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-1 {
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-3 {
   width: 50%;
 }
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-1 img {
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-3 img {
   width: 100%;
   height: auto; /* 비율 유지 */
 }
 
 /* 서브 이미지2 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-2 {
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-4 {
   width: 50%;
 }
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-2 img {
+.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-4 img {
   width: 100%;
   height: auto; /* 비율 유지 */
 }
@@ -109,7 +102,7 @@
 /* 포커스 라인 */
 .focusLine {
   width: 0;
-  margin: 2% auto;
+  margin: 1% auto;
   height: 2px;
   background-color: black;
   transition: all 1s;

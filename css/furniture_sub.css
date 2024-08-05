@@ -1,12 +1,4 @@
 @charset "utf-8";
-
-/* Base styles for all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* .furniture_sub */
 .furniture_sub {
   position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
