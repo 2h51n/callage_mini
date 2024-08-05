@@ -7,6 +7,65 @@ window.onload = function(){
     });
 
 
+// 모바일 헤더 메뉴 영역
+    // 메뉴
+    const mBt = this.document.querySelector(".m-menuBt");
+    const mMenu = this.document.querySelector(".m-menu");
+    const htmlRoot = this.document.querySelector("html");
+    const closeBtM = this.document.querySelector(".closeBt-m");
+    const closeBtC = this.document.querySelector(".closeBt-c");
+    // 메뉴 또는 카트 클릭시 body의 백그라운드가 어둡게 변함
+    const btBlur = this.document.querySelector("html");
+
+    mBt.addEventListener("click", function(){
+        const mstate = this.classList.contains("m-active");
+        if(!mstate){
+            this.classList.add("m-active");
+            mMenu.classList.add("m-menuActive");
+            htmlRoot.classList.add("m-menuActive")
+            cartList.classList.remove("c-menuActive");
+            btBlur.classList.add("bt-blur");
+        }
+        else{
+            this.classList.remove("m-active");
+            mMenu.classList.remove("m-menuActive");
+            htmlRoot.classList.remove("m-menuActive");
+            btBlur.classList.remove("bt-blur");
+        }
+    });
+
+    //카트(장바구니)
+    const cartBt = this.document.querySelector(".cartBt");
+    const cartList = this.document.querySelector(".cartList");
+    cartBt.addEventListener("click" , function(){
+        const carting = this.classList.contains("cart-active");
+        if(!carting){
+            this.classList.add("cart-active");
+            cartList.classList.add("c-menuActive")
+            mMenu.classList.remove("m-menuActive");
+            htmlRoot.classList.remove("m-menuActive");
+            btBlur.classList.add("bt-blur");
+        }
+        else{
+            this.classList.remove("cart-active");
+            cartList.classList.remove("c-menuActive");
+            btBlur.classList.remove("bt-blur");
+        }
+    });
+    closeBtM.addEventListener("click", function(){
+        mMenu.classList.remove("m-menuActive");
+        htmlRoot.classList.remove("m-menuActive");
+        btBlur.classList.remove("bt-blur");
+    });
+    closeBtC.addEventListener("click", function(){
+        mMenu.classList.remove("c-menuActive");
+        cartList.classList.remove("c-menuActive");
+        btBlur.classList.remove("bt-blur");
+    });
+
+
+
+    
     // 메뉴 1 슬라이드 영역
     // const menu1 = new Swiper(".colorSwiper", {
     //     slidesPerView: 1,
