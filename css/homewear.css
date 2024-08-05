@@ -1,170 +1,188 @@
 @charset "utf-8";
-/* .homewear */
-.homewear {
-  width: 100%;
+
+.boxs_two_colum {
+  display: block;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 40px 0;
 }
 
-/* 스와이퍼 구역 */
-.colorinterior {
-  width: 70%;
-  margin: 0 auto;
+.container {
+  max-width: 100%;
+  margin: 0 8%;
 }
 
-/* 스와이퍼 */
-.colorSwiper {
-  width: 100%;
-  height: 100%;
-}
-
-/* 슬라이드 세션 */
-.colorSwiper > .swiper-wrapper > .swiper-slide {
-  width: 100%;
-  height: auto; /* 컨텐츠에 맞춰 높이 조정 */
+.boxs_two_colum__flex {
   display: flex;
-  align-items: center;
-  gap: 2%;
+  gap: 2rem;
+}
+
+.left {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left a {
+  display: block;
+  box-sizing: border-box;
+}
+
+.left a img {
+  width: 100%;
+  height: auto;
+}
+
+.right {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.right__info {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.right__info h3 {
+  font-family: post_groteskbold !important;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c1b1b;
+  letter-spacing: 0.15em !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.right__info .text p {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.right__info a {
+  display: table;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #666;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+.right__image {
+  display: none; /* 보이지 않게 설정됨 */
+  
+}
+
+.right__boxs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  margin: 0 -20px;
+}
+
+.right__boxs .box {
+  margin-top: 100px;
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
   overflow: hidden;
 }
 
-/* 메인 이미지 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
-  width: 100%;
-  height: auto; /* 컨텐츠에 맞춰 높이 조정 */
-}
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg > img {
-  width: 100%;
-  height: auto; /* 비율 유지 */
-}
-
-/* 서브 이미지 구역 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  gap: 4%;
-}
-
-/* 설명 및 서브 이미지 구역 */
-.colorSwiper-contents {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6%;
+.right__boxs .box a {
+  display: block;
+  box-sizing: border-box;
   width: 100%;
 }
 
-/* 설명(텍스트) */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subText {
+.right__boxs .box img {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
+  height: auto;
+  transition: 1.2s ease;
+}
+
+.right__boxs .box:hover img {
+  transform: scale(1.2);
+}
+
+.right__boxs .box h3 {
+  font-size: 15px;
+  font-weight: 400;
   text-align: center;
 }
-.colorSwiper-subText > h2 {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.15rem;
-}
-.colorSwiper-subText > p {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 25px;
-  letter-spacing: 0.09em;
-}
-.colorSwiper-subText > a {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 25px;
-  letter-spacing: 0.09em;
-  text-decoration: underline;
-  color: rgba(0, 0, 0, 0.6);
-}
 
-/* 서브 이미지1 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-3 {
-  width: 50%;
-}
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-3 img {
-  width: 100%;
-  height: auto; /* 비율 유지 */
-}
-
-/* 서브 이미지2 */
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-4 {
-  width: 50%;
-}
-.colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-contents > .colorSwiper-subImg > .cssi-4 img {
-  width: 100%;
-  height: auto; /* 비율 유지 */
-}
-
-/* 포커스 라인 */
-.focusLine {
-  width: 0;
-  margin: 1% auto;
-  height: 2px;
-  background-color: black;
-  transition: all 1s;
-}
-.focusLine.active {
-  width: 90%;
-  margin: 2% auto;
-  height: 2px;
-}
-
-/* Media Queries for responsiveness */
-
-/* Tablet view */
-@media (max-width: 768px) {
-  .colorinterior {
-    width: 90%;
-    height: auto; /* 비율에 맞춰 높이 조정 */
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 0 5%;
   }
 
-  .colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
-    height: auto; /* 비율에 맞춰 높이 조정 */
+  .boxs_two_colum__flex {
+    flex-direction: column; /* 화면 크기가 작아지면 열을 세로로 정렬 */
   }
 
-  .colorSwiper-subText > h2 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .colorSwiper-subText > p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .colorSwiper-subText > a {
-    font-size: 12px;
-    line-height: 20px;
+  .right {
+    padding: 20px; /* 화면 크기에 따라 패딩 조정 */
   }
 }
 
-/* Mobile view */
-@media (max-width: 480px) {
-  .colorinterior {
-    width: 100%;
-    height: auto; /* 비율에 맞춰 높이 조정 */
+@media screen and (max-width: 900px) {
+  .right__info {
+    margin-top: 100px; /* 화면 크기가 더 작아질 때 마진 조정 */
   }
 
-  .colorSwiper > .swiper-wrapper > .swiper-slide > .colorSwiper-mainImg {
-    height: auto; /* 비율에 맞춰 높이 조정 */
+  .right__boxs .box {
+    margin-top: 0; /* 박스 간의 여백 조정 */
   }
 
-  .colorSwiper-subText > h2 {
-    font-size: 16px;
-    line-height: 22px;
+  .right__info h3 {
+    font-size: 18px; /* 폰트 크기 조정 */
   }
 
-  .colorSwiper-subText > p {
-    font-size: 12px;
-    line-height: 18px;
+  .right__info .text p {
+    font-size: 14px; /* 폰트 크기 조정 */
   }
 
-  .colorSwiper-subText > a {
-    font-size: 10px;
-    line-height: 16px;
+  .right__info a {
+    font-size: 12px; /* 폰트 크기 조정 */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    margin: 0 2%; /* 화면 크기가 작을 때 여백 조정 */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* 열을 전체 너비로 설정 */
+    padding: 0; /* 패딩 제거 */
+  }
+
+  .right__boxs .box {
+    width: 100%; /* 박스의 너비를 100%로 설정 */
+    margin-top: 20px; /* 상단 여백 조정 */
+  }
+
+  .right__info {
+    margin-top: 50px; /* 마진 조정 */
+  }
+
+  .right__info h3 {
+    font-size: 16px; /* 폰트 크기 조정 */
+  }
+
+  .right__info .text p {
+    font-size: 12px; /* 폰트 크기 조정 */
+  }
+
+  .right__info a {
+    font-size: 10px; /* 폰트 크기 조정 */
   }
 }
