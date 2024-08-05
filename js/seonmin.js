@@ -8,19 +8,19 @@ window.onload = function(){
 
 
     // 메뉴 1 슬라이드 영역
-    const menu1 = new Swiper(".colorSwiper", {
-        slidesPerView: 1,
-        grid: {
-            rows: 1,
-            fill: "row",
-        },
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-    });
+    // const menu1 = new Swiper(".colorSwiper", {
+    //     slidesPerView: 1,
+    //     grid: {
+    //         rows: 1,
+    //         fill: "row",
+    //     },
+    //     spaceBetween: 30,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 2500,
+    //         disableOnInteraction: false,
+    //     },
+    // });
 
 
     // 메뉴 2 슬라이드 영역
