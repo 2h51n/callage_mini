@@ -57,6 +57,9 @@ a {
 .menu-hover:hover i {
   color: rgb(0, 0, 0);
 }
+
+
+
 /* 헤더 서브 메뉴 리스트 */
 .subDisplay {
   z-index: 9;
@@ -153,6 +156,37 @@ a {
   text-align: center;
 }
 
+/* 인테리어 서브 메뉴 리스트 "1108" */
+
+.subtwinText-i{
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 85px !important;
+}
+.subtwinText-i > li > h4 {
+  /* 서브 메뉴 메인 제목 */
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+.subtwinText-i > li > ul > li > a {
+  line-height: 2;
+  color: rgb(150, 150, 150);
+}
+.subtwinText-i > li > ul > li:hover > a {
+  line-height: 2;
+  color: rgb(0, 0, 0);
+}
+.subtwinText-i > li > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+
+
+
 /* 헤더 메인 아이콘 */
 .header-icon {
   display: flex;
@@ -177,7 +211,23 @@ a {
   transform: translate(-50%, -50%);
   filter: drop-shadow(1px 1px 2px #00000042);
 }
+
+@media screen and (max-width: 1400px) {
+  .header-submenu{
+    gap: 36px;
+  }
+  .subtwinText-i{
+    gap: 36px !important;
+  }
+}
 @media screen and (max-width: 1280px) {
+}
+@media screen and (max-width: 1108px) {
+  .subtwinText-i{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+  }
 }
 @media screen and (max-width: 1024px) {
 }
