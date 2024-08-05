@@ -1,6 +1,11 @@
 @charset "utd-8";
 
+.wrap .header-wrap{
+    position: relative;
+}
 .wrap .header-wrap .header{
+    position: fixed;
+        top: 0;
     width: 100%;
     height: 23px;
     padding: 5px;
