@@ -1,11 +1,4 @@
 @charset "utf-8";
-/* Base styles for all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* .brand_copy */
 .brand_copy {
   position: relative;
@@ -43,10 +36,11 @@
 .brand_text > p {
   text-align: center;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 34px;
   letter-spacing: 0.15em;
   color: #000000;
+  padding: 0 50px  0 50px;
 }
 
 /* 'ABOUT' 링크 */
