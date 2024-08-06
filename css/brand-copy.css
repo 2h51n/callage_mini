@@ -43,24 +43,36 @@
   padding: 0 50px  0 50px;
 }
 
-/* 'ABOUT' 링크 */
+/* 'ABOUT', 'CONTACTS' 링크 스타일 */
 .about_text,
-.contacts  {
-  display: inline-block;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0.10em;
-  color: rgba(0, 0, 0, 0.6);
-  text-decoration: none; /* 기본 상태에서 밑줄을 제거 */
-  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
-  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화의 부드러운 전환 효과 */
-  padding: 5px 0; /* 수직 패딩으로 링크와 텍스트의 간격을 조정 */
+.contacts {
+  display: inline-block; /* 인라인 블록 요소로 설정 */
+  font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+  font-weight: 400; /* 폰트 두께 설정 */
+  font-size: 14px; /* 폰트 크기 설정 */
+  line-height: 20px; /* 줄 높이 설정 */
+  letter-spacing: 0.10em; /* 문자 간격 설정 */
+  color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 설정 */
+  text-decoration: none; /* 기본 상태에서 밑줄 제거 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 배경 선의 위치 및 크기 설정 */
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 */
+  padding: 1px 0; /* 수직 패딩으로 링크와 텍스트의 간격 조정 */
 }
+
+/* 링크에 커서를 올렸을 때 밑줄 효과 */
 .about_text:hover,
-.contacts:hover{
-  background-size: 0 1px; /* 밑줄의 크기를 0으로 설정하여 사라지게 함 */
+.contacts:hover {
+  background-size: 0 1px; /* 배경 선의 크기를 0으로 설정하여 사라지게 함 */
+}
+
+/* ABOUT과 CONTACTS 사이의 구분선 */
+.separator {
+  display: inline-block; /* 인라인 블록 요소로 설정 */
+  width: 1px; /* 구분선의 너비 */
+  height: 20px; /* 구분선의 높이 */
+  background-color: rgba(0, 0, 0, 0.6); /* 구분선의 색상 */
+  vertical-align: middle; /* 수직 정렬 */
+  margin: 0 10px; /* 좌우 여백 설정 */
 }
 
 /* Media Queries for responsiveness */
