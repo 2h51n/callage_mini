@@ -152,54 +152,82 @@ margin-top: 10px;
     width: 146.33px;
     height: 44.22px;
     border: 1px solid #010101;
-    color: #f1f1f1;
-    background-color: #010101; /* 기본 배경색 */
     margin-top: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    overflow: hidden; /* 배경이 버튼을 벗어나지 않게 함 */
+    overflow: hidden;
     position: relative;
-    background-image: linear-gradient(to right, transparent, transparent); /* 기본 배경 이미지 */
-    background-size: 200% 100%; /* 배경 크기 설정 */
+    background-color: rgb(0, 0, 0) ;
+    /* background-size: 100% 100%; 배경 크기 설정 */
     background-position: left bottom; /* 기본 위치 */
-    transition: color .45s cubic-bezier(.785,.135,.15,.86), 
-                border-color .45s cubic-bezier(.785,.135,.15,.86), 
-                background-position .45s cubic-bezier(.785,.135,.15,.86); /* 배경 위치 변화 추가 */
 }
 
-/* 버튼 기본 배경 이미지 설정 */
-.button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.subscribe{
+    position: relative;
     width: 100%;
     height: 100%;
-    background: #f1f1f1; /* 호버 시 표시될 배경색 */
-    z-index: 0;
-    transition: transform .45s cubic-bezier(.785,.135,.15,.86);
-    transform: translateX(-100%); /* 기본 상태에서 왼쪽으로 이동 */
+    transform: translateX(0)
+}
+.subscribe.subscribeOver{
+    background-color: rgb(0, 0, 0) ;
+    filter: invert(100%);
+    animation: subscribeBT  0.7s infinite;
+    animation-iteration-count : 1 ;
+}
+.subscribe.subscribeOut{
+    animation: subscribeBTOut  0.7s infinite;
+    animation-iteration-count : 1 ;
+    transform: translateX(100%);
 }
 
-/* 버튼 텍스트와 테두리 스타일 */
-.button {
-    position: relative;
-    z-index: 1; /* 버튼의 텍스트가 배경 위에 오도록 함 */
+
+.button::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "SUBSCRIBE";
+    font-family: "Open Sans", sans-serif;
+    font-weight: 420;
+    filter: invert(100%);
+    color: #000000;
+    transition: all 0.5s;
+}
+.button:hover::after{
+    color: #ffffff;
+    font-weight: 320;
 }
 
-/* 버튼 호버 스타일 */
-.button:hover {
-    color: #010101 ; /* 호버 시 텍스트 색상 변경 */
-    border-color: #010101; /* 호버 시 테두리 색상 변경 */
-    background-position: right bottom; /* 호버 시 배경 위치 */
+@keyframes subscribeBT {
+	0% { 
+		transform: translateX(-100%);
+	}
+	100% {          
+        transform: translateX(-0);
+	}
+}
+@keyframes subscribeBTOut {
+	0% { 
+		transform: translateX(0);
+	}
+	100% {          
+        transform: translateX(100%);
+	}
+}
+@keyframes subscribeBTText {
+	0% { 
+        color: #ffffff;
+	}
+	100% {    
+        color: #ffffff;      
+	}
 }
 
-.button:hover::before {
-    transform: translateX(0); /* 호버 시 배경이 왼쪽에서 오른쪽으로 이동 */
-    color: #010101;
-}
+
+
+
 
 
 /* 사용자 인터페이스가 세밀한 경우의 버튼 스타일 */
