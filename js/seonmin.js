@@ -7,7 +7,7 @@ window.onload = function(){
     });
 
 
-// 모바일 헤더 메뉴 영역
+    // 모바일 헤더 메뉴 영역
     // 메뉴
     const mBt = this.document.querySelector(".m-menuBt");
     const mMenu = this.document.querySelector(".m-menu");
@@ -61,6 +61,18 @@ window.onload = function(){
         mMenu.classList.remove("c-menuActive");
         cartList.classList.remove("c-menuActive");
         btBlur.classList.remove("bt-blur");
+    });
+
+
+    // 푸터 subscribe 버튼 커서
+    const subscribeBt = document.querySelector(".button")
+    const subscribeBtColor = document.querySelector(".subscribe")
+    subscribeBt.addEventListener("mouseover", function(){
+        subscribeBtColor.classList.add("subscribeOver");
+        subscribeBtColor.classList.remove("subscribeOut");
+    });
+    subscribeBt.addEventListener("mouseout", function(){
+        subscribeBtColor.classList.add("subscribeOut");
     });
 
 
