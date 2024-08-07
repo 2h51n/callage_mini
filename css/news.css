@@ -1,135 +1,209 @@
 @charset "utf-8";
 
 /* 일반 스타일 설정 */
+
+/* .container: 컨테이너 스타일 */
+/* 페이지 내의 주 컨테이너로, 패딩과 여백 설정 */
 .container {
-    padding: 60px;
-    --distance-to-bleed: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
-    margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
-    margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+  padding: 60px; /* 컨테이너 내부의 여백 설정 */
+  --distance-to-bleed: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 여백의 거리 계산 */
+  margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 컨테이너의 좌측 여백 설정 */
+  margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 컨테이너의 우측 여백 설정 */
 }
 
+/* .news_title_h2: 뉴스 제목 스타일 */
+/* 뉴스 섹션의 제목 스타일 설정 */
 .news_title_h2 {
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    letter-spacing: 0.15em;
-    color: #000006;
-    text-align: center;
-    margin-bottom: 30px;
+  font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+  font-style: normal; /* 폰트 스타일 설정 */
+  font-weight: 700; /* 폰트 두께 설정 */
+  font-size: 20px; /* 폰트 크기 설정 */
+  line-height: 27px; /* 줄 높이 설정 */
+  letter-spacing: 0.15em; /* 문자 간격 설정 */
+  color: #000006; /* 텍스트 색상 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin-bottom: 30px; /* 하단 여백 설정 */
 }
 
-/* 섹션 여백 */
+
+/* .section-spacing: 섹션 여백 스타일 */
+/* 섹션의 레이아웃 간격 설정 */
 .section-spacing {
-    gap: var(--section-stack-gap);
-    grid-auto-columns: minmax(0, 1fr);
-    display: grid;
+  gap: var(--section-stack-gap); /* 섹션 간 간격 설정 */
+  grid-auto-columns: minmax(0, 1fr); /* 그리드 열의 자동 크기 조정 설정 */
+  display: grid; /* 그리드 레이아웃 설정 */
 }
 
-/* 뉴스 섹션 */
+/* .news: 뉴스 섹션 스타일 */
+/* 뉴스 항목을 담는 섹션의 레이아웃 설정 */
 .news {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--multi-column-gap, 2rem);
+  display: flex; /* 플렉스 박스 레이아웃 설정 */
+  flex-wrap: wrap; /* 아이템이 부모 컨테이너를 넘지 않도록 감싸기 설정 */
+  gap: var(--multi-column-gap, 2rem); /* 뉴스 항목 간의 간격 설정 */
 }
 
-/* 뉴스 항목 */
+/* .news_item: 뉴스 항목 스타일 */
+/* 개별 뉴스 항목의 스타일 설정 */
 .news_item {
-    flex: 1 1 calc(33.333% - var(--multi-column-gap, 2rem));
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
+  flex: 1 1 calc(33.333% - var(--multi-column-gap, 2rem)); /* 항목의 기본 너비와 너비 비율 설정 */
+  box-sizing: border-box; /* 테두리와 패딩을 포함한 너비와 높이 설정 */
+  display: flex; /* 플렉스 박스 레이아웃 설정 */
+  flex-direction: column; /* 플렉스 방향을 세로로 설정 */
+  align-items: center; /* 플렉스 아이템을 중앙 정렬 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 설정 */
+  position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대 위치 설정 */
 }
 
+/* .news_wrap: 뉴스 래퍼 스타일 */
+/* 뉴스 항목 내의 래퍼 스타일 설정 */
 .news_wrap {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%; /* 너비를 100%로 설정하여 부모 컨테이너에 맞춤 */
+  height: 100%; /* 높이를 100%로 설정하여 부모 컨테이너에 맞춤 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 설정 */
+  position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대 위치 설정 */
 }
 
-/* 뉴스 이미지를 기본 상태와 호버 상태에 대해 설정 */
+/* .news_wrap img: 뉴스 이미지 기본 상태 및 호버 상태 */
+/* 뉴스 이미지의 기본 및 호버 상태 스타일 설정 */
 .news_wrap img {
-    width: 100%;
-    height: auto;
-    transition: transform 7.7s ease; /* 확대 효과에 대한 트랜지션 설정 (7초에서 0.7초로 변경) */
-    object-fit: cover;
-    cursor: pointer;
+  width: 100%; /* 이미지의 너비를 100%로 설정 */
+  height: auto; /* 자동으로 높이 조정 */
+  transition: transform 7.7s ease; /* 확대 효과에 대한 트랜지션 설정 (7초에서 0.7초로 변경) */
+  object-fit: cover; /* 이미지 비율을 유지하며 컨테이너를 덮도록 설정 */
+  cursor: pointer; /* 이미지에 커서를 올릴 때 포인터로 변경 */
 }
 
-/* 마우스 오버 시 이미지 확대 */
+/* .news_wrap:hover img: 마우스 오버 시 이미지 확대 */
+/* 뉴스 항목에 마우스를 올렸을 때 이미지 확대 효과 */
 .news_wrap:hover img {
-    transform: scale(1.2);
+  transform: scale(1.2); /* 이미지 확대 비율 설정 */
 }
 
-/* 뉴스 텍스트 */
+/* .news_txt: 뉴스 텍스트 스타일 */
+/* 뉴스 항목의 텍스트 스타일 설정 */
 .news_txt {
-    text-align: center;
-    padding: 1rem;
-    line-height: 1.4;
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 1rem; /* 상하좌우 패딩 설정 */
+  line-height: 1.4; /* 줄 높이 설정 */
 }
 
+/* .news_title: 뉴스 제목 스타일 */
+/* 뉴스 항목의 제목 텍스트 스타일 설정 */
 .news_title {
-    font-size: 14px;
-    font-weight: 700;
-    color: rgb(var(--text-color, 0, 0, 0));
-    margin: 0.5rem 0;
+  font-size: 14px; /* 폰트 크기 설정 */
+  font-weight: 700; /* 폰트 두께 설정 */
+  color: rgb(var(--text-color, 0, 0, 0)); /* 텍스트 색상 설정 */
+  letter-spacing: 0.15em; /* 문자 간격 설정 */
+  margin: 0.5rem 0; /* 상하 여백 설정 */
 }
 
+/* .news_description: 뉴스 설명 스타일 */
+/* 뉴스 항목의 설명 텍스트 스타일 설정 */
 .news_description {
-    font-size: 14px;
-    color: rgb(var(--text-color, 0, 0, 0));
-    margin-bottom: 1rem;
-    line-height: 2;
+  font-size: 14px; /* 폰트 크기 설정 */
+  color: rgb(var(--text-color, 0, 0, 0)); /* 텍스트 색상 설정 */
+  margin-bottom: 1rem; /* 하단 여백 설정 */
+  line-height: 2; /* 줄 높이 설정 */
 }
 
-/* 기본 링크 스타일 */
+/* .read_more: 읽기 링크 스타일 */
+/* '읽기 더보기' 링크 스타일 설정 */
 .read_more {
-    letter-spacing: 0.10em;
-    color: rgba(0, 0, 0, 0.6);
-    text-decoration: none;
-    background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat;
-    transition: background-size 0.3s ease-in-out;
-    padding: 5px 0;
+  letter-spacing: 0.1em; /* 문자 간격 설정 */
+  color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
+  text-decoration: none; /* 기본 상태에서 밑줄 제거 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 밑줄 배경 설정 */
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 설정 */
+  padding: 5px 0; /* 수직 패딩 설정 */
 }
 
-/* 링크에 커서를 올렸을 때 밑줄 효과 */
+/* .read_more:hover: 링크 호버 효과 */
+/* '읽기 더보기' 링크에 마우스를 올렸을 때 밑줄 효과 */
 .read_more:hover {
-    background-size: 0 1px;
+  background-size: 0 1px; /* 밑줄을 사라지게 함 */
 }
 
-/* 반응형 디자인 */
-@media screen and (max-width: 699px) {
-    .news {
-        gap: 1.5rem; /* 좁은 화면에서의 간격 조정 */
-    }
+/* Media Queries for responsiveness */
 
-    .news_item {
-        flex: 1 1 100%; /* 너비 100%로 설정하여 세로 방향으로 배치 */
-        margin-bottom: 1.5rem; /* 하단 여백 추가 */
-    }
+
+/* 화면 너비가 480px 이하인 경우 */
+@media screen and (max-width: 480px) {
+  .news_title_h2 {
+    font-size: 16px;
+  }
+  .news {
+    gap: 1rem; /* 좁은 화면에서의 간격 조정 */
+  }
+  .news_item {
+    margin-bottom: 1rem; /* 좁은 화면에서 하단 여백 조정 */
+  }
 }
 
+/* 화면 너비가 481px 이상 699px 이하인 경우 */
+@media screen and (min-width: 481px) and (max-width: 699px) {
+  .news {
+    gap: 1.5rem; /* 좁은 화면에서의 간격 조정 */
+  }
+  .news_title_h2 {
+    font-size: 16px;
+  }
+  .news_item {
+    flex: 1 1 100%; /* 뉴스 항목 너비를 100%로 설정하여 세로 방향으로 배치 */
+    margin-bottom: 1.5rem; /* 하단 여백 추가 */
+  }
+  .container {
+    padding: 30px;
+  }
+}
+
+/* 화면 너비가 700px 이상 998px 이하인 경우 */
 @media screen and (min-width: 700px) and (max-width: 998px) {
-    .news {
-        gap: 2rem; /* 중간 화면에서의 간격 조정 */
-    }
-
-    .news_item {
-        flex: 1 1 calc(50% - var(--multi-column-gap, 2rem)); /* 두 개의 열로 나눔 */
-    }
+  .news {
+    gap: 2rem; /* 중간 화면에서의 간격 조정 */
+  }
+  .news_title_h2 {
+    font-size: 18px;
+  }
+  .news_item {
+    flex: 1 1 calc(50% - var(--multi-column-gap, 2rem)); /* 두 개의 열로 나눔 */
+  }
 }
 
-@media screen and (min-width: 999px) {
-    .news {
-        gap: 2.5rem; /* 넓은 화면에서의 간격 조정 */
-    }
+/* 화면 너비가 999px 이상 1199px 이하인 경우 */
+@media screen and (min-width: 999px) and (max-width: 1199px) {
+  .news {
+    gap: 2.5rem; /* 넓은 화면에서의 간격 조정 */
+  }
+  .news_title_h2 {
+    font-size: 20px;
+  }
+  .news_item {
+    flex: 1 1 calc(33.333% - var(--multi-column-gap, 2.5rem)); /* 세 개의 열로 나눔 */
+  }
+}
 
-    .news_item {
-        flex: 1 1 calc(33.333% - var(--multi-column-gap, 2.5rem)); /* 세 개의 열로 나눔 */
-    }
+/* 화면 너비가 1200px 이상 1599px 이하인 경우 */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  .news {
+    gap: 3rem; /* 더 넓은 화면에서의 간격 조정 */
+  }
+  .news_title_h2 {
+    font-size: 20px;
+  }
+  .news_item {
+    flex: 1 1 calc(33.333% - var(--multi-column-gap, 3rem)); /* 세 개의 열로 나눔 */
+  }
+}
+
+/* 화면 너비가 1600px 이상인 경우 */
+@media screen and (min-width: 1600px) {
+  .news {
+    gap: 4rem; /* 가장 넓은 화면에서의 간격 조정 */
+  }
+  .news_title_h2 {
+    font-size: 20px;
+  }
+  .news_item {
+    flex: 1 1 calc(25% - var(--multi-column-gap, 4rem)); /* 네 개의 열로 나눔 */
+  }
 }

@@ -13,13 +13,23 @@
     <meta property="og:site_name" content="CALLAGE" />
     <meta property="og:type" content="website" />
     <!-- 파비콘 적용 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
-    <!-- <link rel="manifest" href="images/favicon/site.webmanifest" /> -->
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5BBAD5" />
-    <meta name="msapplication-TileColor" content="#DA532C" />
-    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!-- 타이틀 -->
     <title>CALLAGE</title>
     <!-- css적용 -->
@@ -255,8 +265,7 @@
             <div class="header-icon">
               <ul class="head-icon-listWrap">
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><i class="fa-solid fa-cart-shopping cartBt"></i></li>
+                <li><a href="login.html" class="sidebar-login"><i class="fa-regular fa-user"></i></a></li>                <li><i class="fa-solid fa-cart-shopping cartBt"></i></li>
                 <div class="cartList">
                   <button class="closeBt-c">×</button>
                   <ul>
@@ -423,6 +432,10 @@
             <div class="furniture_sub_link_txt op_int_txt">READ TO ORDER</div>
           </div>
         </div>
+        <!-- .furniture_banner 섹션 -->
+        <div class="furniture_img_banner">
+          <img src="img/furniture_img_banner" alt="b_img" />
+        </div>
         <!-- .homewear 섹션 -->
         <section class="boxs_two_colum">
           <div class="focusLine"></div>
@@ -576,7 +589,7 @@
                 <div class="footer__block footer__block--text">
                   <div class="v-stack gap-4 sm:gap-5">
                     <p class="h6">CONTACT</p>
-                    <div class="prose text-subdued">
+                    <div class="prose_text-subdued">
                       <p>150 Royal College Street,&nbsp;<br />London<br />NW1 0TA</p>
                       <p><a href="#" class="number">+44 (0)20 7226 1061</a></p>
                       <p><a href="#" class="address">sales@callage.com</a></p>

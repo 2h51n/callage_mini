@@ -1,49 +1,55 @@
 @charset "utf-8";
-/* .brand_copy */
+
+/* .brand_copy: 브랜드 섹션 스타일 */
+/* 기본 스타일 설정 */
 .brand_copy {
-  position: relative;
-  width: 100%;
-  height: auto;
-  background: #f1f1f1;
-  overflow: hidden; /* 배경 이미지가 부모 컨테이너를 넘지 않도록 함 */
-  margin: 0 auto;
+  position: relative; /* 자식 요소를 절대 위치로 배치할 수 있는 기준 컨테이너로 설정 */
+  width: 100%; /* 전체 너비 설정 */
+  height: auto; /* 자동 높이 조정 */
+  background: #f1f1f1; /* 배경 색상 설정 */
+  overflow: hidden; /* 자식 요소가 부모 요소의 경계를 넘지 않도록 설정 */
+  margin: 0 auto; /* 가로 중앙 정렬 */
 }
 
-/* 배경 이미지 */
+/* .brand_copy_bg: 배경 이미지 스타일 */
+/* 브랜드 섹션의 배경 이미지 설정 */
 .brand_copy_bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  z-index: 0; /* 배경 이미지가 텍스트 뒤에 위치하도록 함 */
+  position: absolute; /* 부모 컨테이너에 대해 절대 위치로 설정 */
+  top: 0; /* 상단 정렬 */
+  left: 0; /* 좌측 정렬 */
+  width: 100%; /* 전체 너비 설정 */
+  height: 100%; /* 전체 높이 설정 */
+  background-size: cover; /* 배경 이미지가 부모 요소를 완전히 덮도록 설정 */
+  z-index: 0; /* 배경 이미지가 텍스트 뒤에 위치하도록 설정 */
 }
 
-/* 브랜드 텍스트 */
+/* .brand_text: 브랜드 텍스트 스타일 */
+/* 브랜드 섹션의 텍스트 스타일 설정 */
 .brand_text {
-  position: relative;
-  width: 100%;
-  max-width: 1962px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  color: #000000;
-  z-index: 1; /* 텍스트가 배경 이미지 위에 위치하도록 함 */
+  position: relative; /* 부모 컨테이너에 대해 상대 위치로 설정 */
+  width: 100%; /* 전체 너비 설정 */
+  max-width: 1962px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  padding: 20px; /* 상하좌우 패딩 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  color: #000000; /* 텍스트 색상 설정 */
+  z-index: 1; /* 텍스트가 배경 이미지 위에 위치하도록 설정 */
 }
 
-/* 설명 텍스트 */
+/* .brand_text > p: 설명 텍스트 스타일 */
+/* 브랜드 섹션의 설명 텍스트 스타일 설정 */
 .brand_text > p {
-  text-align: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 34px;
-  letter-spacing: 0.15em;
-  color: #000000;
-  padding: 0 50px  0 50px;
+  text-align: center; /* 텍스트 중앙 정렬 */
+  font-weight: 700; /* 폰트 두께 설정 */
+  font-size: 16px; /* 폰트 크기 설정 */
+  line-height: 34px; /* 줄 높이 설정 */
+  letter-spacing: 0.15em; /* 문자 간격 설정 */
+  color: #000000; /* 텍스트 색상 설정 */
+  padding: 0 50px; /* 좌우 패딩 설정 */
 }
 
-/* 'ABOUT', 'CONTACTS' 링크 스타일 */
+/* .about_text, .contacts: 링크 스타일 */
+/* 'ABOUT', 'CONTACTS' 링크 스타일 설정 */
 .about_text,
 .contacts {
   display: inline-block; /* 인라인 블록 요소로 설정 */
@@ -51,27 +57,29 @@
   font-weight: 400; /* 폰트 두께 설정 */
   font-size: 14px; /* 폰트 크기 설정 */
   line-height: 20px; /* 줄 높이 설정 */
-  letter-spacing: 0.10em; /* 문자 간격 설정 */
-  color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 설정 */
+  letter-spacing: 0.1em; /* 문자 간격 설정 */
+  color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
   text-decoration: none; /* 기본 상태에서 밑줄 제거 */
-  background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 배경 선의 위치 및 크기 설정 */
-  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 밑줄 배경 설정 */
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 설정 */
   padding: 1px 0; /* 수직 패딩으로 링크와 텍스트의 간격 조정 */
 }
 
-/* 링크에 커서를 올렸을 때 밑줄 효과 */
+/* .about_text:hover, .contacts:hover: 링크 호버 효과 */
+/* 링크에 마우스를 올렸을 때 밑줄 효과 */
 .about_text:hover,
 .contacts:hover {
-  background-size: 0 1px; /* 배경 선의 크기를 0으로 설정하여 사라지게 함 */
+  background-size: 0 1px; /* 밑줄의 크기를 0으로 설정하여 사라지게 함 */
 }
 
-/* ABOUT과 CONTACTS 사이의 구분선 */
+/* .separator: 'ABOUT'과 'CONTACTS' 사이의 구분선 스타일 */
+/* 두 링크 사이의 구분선 설정 */
 .separator {
   display: inline-block; /* 인라인 블록 요소로 설정 */
-  width: 1px; /* 구분선의 너비 */
-  height: 20px; /* 구분선의 높이 */
-  background-color: rgba(0, 0, 0, 0.6); /* 구분선의 색상 */
-  vertical-align: middle; /* 수직 정렬 */
+  width: 1px; /* 구분선의 너비 설정 */
+  height: 20px; /* 구분선의 높이 설정 */
+  background-color: rgba(0, 0, 0, 0.6); /* 구분선 색상 설정 */
+  vertical-align: middle; /* 수직 정렬 설정 */
   margin: 0 10px; /* 좌우 여백 설정 */
 }
 
@@ -80,35 +88,35 @@
 /* Tablet view */
 @media (max-width: 768px) {
   .brand_text {
-    padding: 10px;
+    padding: 10px; /* 패딩 조정 */
   }
 
   .brand_text > p {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px; /* 폰트 크기 조정 */
+    line-height: 24px; /* 줄 높이 조정 */
   }
 
-  .about,
+  .about_text,
   .contacts {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 14px; /* 폰트 크기 조정 */
+    line-height: 18px; /* 줄 높이 조정 */
   }
 }
 
 /* Mobile view */
 @media (max-width: 480px) {
   .brand_text {
-    padding: 5px;
+    padding: 5px; /* 패딩 조정 */
   }
 
   .brand_text > p {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px; /* 폰트 크기 조정 */
+    line-height: 22px; /* 줄 높이 조정 */
   }
 
-  .about,
+  .about_text,
   .contacts {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 12px; /* 폰트 크기 조정 */
+    line-height: 16px; /* 줄 높이 조정 */
   }
 }

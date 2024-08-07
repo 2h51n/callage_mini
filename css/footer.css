@@ -2,153 +2,168 @@
 
 /* 컨테이너 스타일링 */
 .container_ft {
-    --distance-to-bleed: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
-    margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
-    margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
-    max-width: 100%;
-    margin: 0 8%;
-    
+    --distance-to-bleed: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 컨테이너의 여백 거리 계산 */
+    margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 좌측 여백 설정 */
+    margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2); /* 우측 여백 설정 */
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    margin: 0 8%; /* 좌우 여백 설정 */
 }
 
+/* 푸터 기본 스타일링 */
 .footer {
-    background: rgb(var(--background));
-    color: rgb(var(--text-color));
-    padding-block-start: var(--section-vertical-spacing);
-    padding-block-end: min(var(--section-vertical-spacing), 3rem);
-    background-color: #f1f1f1;;
+    background: rgb(var(--background)); /* 배경 색상 설정 */
+    color: rgb(var(--text-color)); /* 텍스트 색상 설정 */
+    padding-block-start: var(--section-vertical-spacing); /* 상단 패딩 설정 */
+    padding-block-end: min(var(--section-vertical-spacing), 3rem); /* 하단 패딩 설정, 최대 3rem */
+    background-color: #f1f1f1; /* 배경 색상 설정 */
 }
 
 /* 푸터 내부 스타일링 */
 .footer__inner {
-    row-gap: min(var(--section-vertical-spacing), 3rem);
-    display: grid;
-    
+    row-gap: min(var(--section-vertical-spacing), 3rem); /* 행 간격 설정, 최대 3rem */
+    display: grid; /* 그리드 레이아웃 설정 */
 }
 
 /* 푸터 블록 리스트 스타일링 */
 .footer__block-list {
-    justify-content: start;
-    align-items: start;
-    gap: min(var(--section-vertical-spacing), 1rem);
-    display: grid;
+    justify-content: start; /* 컨텐츠를 시작점에 정렬 */
+    align-items: start; /* 아이템을 시작점에 정렬 */
+    gap: min(var(--section-vertical-spacing), 1rem); /* 아이템 간 간격 설정, 최대 1rem */
+    display: grid; /* 그리드 레이아웃 설정 */
 }
 
 /* 푸터 블록 기본 스타일링 */
 .footer__block {
-    padding: 1rem;
+    padding: 1rem; /* 블록 내부 패딩 설정 */
 }
 
 /* 링크 블록 스타일링 */
 .footer__block--links > p {
-    font-size: 13px; /* 폰트 크기 */
-    font-weight: 400; /* 폰트 두께 */
-    color: #1c1b1b; /* 텍스트 색상 */
-    font-family: 'Open Sans', sans-serif; /* 폰트 변경 */
+    font-size: 13px; /* 폰트 크기 설정 */
+    font-weight: 400; /* 폰트 두께 설정 */
+    color: #1c1b1b; /* 텍스트 색상 설정 */
+    font-family: 'Open Sans', sans-serif; /* 폰트 패밀리 설정 */
 }
-.v-stack > p{
-    letter-spacing: 0.1em;
-    font-size: 14px; /* 폰트 크기 */
-    font-weight: 700; /* 폰트 두께 */
-    color: #1c1b1b; /* 텍스트 색상 */
-    font-family: 'Open Sans', sans-serif; /* 폰트 변경 */
+
+/* 수직 스택 스타일링 */
+.v-stack > p {
+    letter-spacing: 0.1em; /* 문자 간격 설정 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    font-weight: 700; /* 폰트 두께 설정 */
+    color: #1c1b1b; /* 텍스트 색상 설정 */
+    font-family: 'Open Sans', sans-serif; /* 폰트 패밀리 설정 */
 }
+
+/* 강조된 텍스트 스타일링 */
 .text-subdued {
-    color: rgb(var(--text-color) / .65);
+    color: rgb(var(--text-color) / .65); /* 텍스트 색상 강조 설정 */
 }
+
+/* 일반 텍스트 스타일링 */
 .prose {
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere; /* 텍스트 넘침 처리 설정 */
+    font-size: 14px; /* 폰트 크기 설정 */
+    color: #6a6a6a; /* 텍스트 색상 설정 */
+    text-decoration: none; /* 기본 상태에서 텍스트 장식 제거 */
+    line-height: 30px; /* 줄 높이 설정 */
 }
+
+/* 항목 간 간격 설정 */
 .gap-4 {
-    gap: 1rem;
+    gap: 1rem; /* 간격 설정 */
 }
+
+/* 수직 스택 레이아웃 설정 */
 .v-stack {
-    grid-template-columns: minmax(0, 1fr);
-    align-content: start;
-    display: grid;
+    grid-template-columns: minmax(0, 1fr); /* 그리드 열 크기 설정 */
+    align-content: start; /* 컨텐츠 상단 정렬 */
+    display: grid; /* 그리드 레이아웃 설정 */
 }
 
-footer .footer__block .v-stack > p {
-    font-size: 13px;
-    font-weight: 400;
-
-}
-
+/* 링크 색상 및 스타일 설정 */
 .link-faded {
-    font-size: 13px;
-    color: #6a6a6a;
-    text-decoration: none;
-    line-height: 30px;
-}
-.prose{
-    font-size: 14px;
-    color: #6a6a6a;
-    text-decoration: none;
-    line-height: 30px;
-}
-.number{
-    font-size: 14px;
-    color: #6a6a6a;
-    text-decoration: none;
-    line-height: 30px;
-}
-.address{
-    font-size: 14px;
-    color: #6a6a6a;
-    text-decoration: none;
-    line-height: 30px;
+    font-size: 13px; /* 폰트 크기 설정 */
+    color: #6a6a6a; /* 텍스트 색상 설정 */
+    text-decoration: none; /* 기본 상태에서 텍스트 장식 제거 */
+    line-height: 30px; /* 줄 높이 설정 */
 }
 
-footer .social-media {
-    margin-top: 20px;
+.prose_text-subdued > p{
+    font-size: 13px; /* 폰트 크기 설정 */
+    color: #6a6a6a; /* 텍스트 색상 설정 */
+    text-decoration: none; /* 기본 상태에서 텍스트 장식 제거 */
+    line-height: 30px; /* 줄 높이 설정 */
+}
+
+.prose_text-subdued > p > a{
+    font-size: 13px; /* 폰트 크기 설정 */
+    color: #6a6a6a; /* 텍스트 색상 설정 */
+    text-decoration: none; /* 기본 상태에서 텍스트 장식 제거 */
+    line-height: 30px; /* 줄 높이 설정 */
+}
+
+/* 소셜 미디어 관련 스타일링 */
+.footer .social-media {
+    margin-top: 20px; /* 상단 여백 설정 */
 }
 
 .social-media--list .social-media__item {
-    opacity: .65;
-    transition: opacity .2s, color .2s;
+    opacity: .65; /* 투명도 설정 */
+    transition: opacity .2s, color .2s; /* 부드러운 트랜지션 설정 */
 }
 
+/* 인스타그램 브랜드 색상 설정 */
 .branding-colors--instagram {
-    --branding-background: 195 42 163;
-    --branding-color: 255 255 255;
-margin-top: 10px;
+    --branding-background: 195 42 163; /* 배경 색상 설정 */
+    --branding-color: 255 255 255; /* 텍스트 색상 설정 */
+    margin-top: 10px; /* 상단 여백 설정 */
 }
 
+/* 핀터레스트 브랜드 색상 설정 */
 .branding-colors--pinterest {
-    --branding-background: 189 8 28;
-    --branding-color: 255 255 255;
-    margin-top: 10px;
+    --branding-background: 189 8 28; /* 배경 색상 설정 */
+    --branding-color: 255 255 255; /* 텍스트 색상 설정 */
+    margin-top: 10px; /* 상단 여백 설정 */
 }
 
-.tap-area{
-    color: #6a6a6a;
-    transition: all 0.2s;
+/* 버튼 기본 스타일 설정 */
+.tap-area {
+    color: #6a6a6a; /* 텍스트 색상 설정 */
+    transition: all 0.2s; /* 부드러운 트랜지션 설정 */
 }
-.tap-area:hover{
-    color: #161616;
+
+.tap-area:hover {
+    color: #161616; /* 호버 시 텍스트 색상 변경 */
 }
+
+/* 소셜 미디어 리스트 스타일 설정 */
 .social-media--list {
-    align-items: center;
-    gap: var(--social-media-list-gap, .75rem 3rem);
-    flex-wrap: wrap;
-    display: flex;
+    align-items: center; /* 아이템을 중앙 정렬 */
+    gap: var(--social-media-list-gap, .75rem 3rem); /* 아이템 간 간격 설정 */
+    flex-wrap: wrap; /* 아이템을 감싸도록 설정 */
+    display: flex; /* 플렉스 박스 레이아웃 설정 */
 }
+
+/* 기본 스타일링을 위한 비공식 리스트 스타일 제거 */
 .unstyled-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    list-style: none; /* 기본 리스트 스타일 제거 */
 }
 
-#input{
-    width: 100%;
-    height: 45.88px;
-    padding: 10.4px 12.8px;
-    background: none;
-    border: 0.1px solid #010101;
-    opacity: 0.4;
+/* 입력 필드 스타일링 */
+#input {
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 45.88px; /* 높이 설정 */
+    padding: 10.4px 12.8px; /* 패딩 설정 */
+    background: none; /* 배경 제거 */
+    border: 0.1px solid #010101; /* 테두리 설정 */
+    opacity: 0.4; /* 투명도 설정 */
 }
 
-/* 버튼 기본 스타일 */
+/* 버튼 기본 스타일 설정 */
 .button {
+
     width: 146.33px;
     height: 44.22px;
     border: 1px solid #010101;
@@ -198,45 +213,95 @@ margin-top: 10px;
 .button:hover::after{
     color: #ffffff;
     font-weight: 320;
+    width: 146.33px; /* 너비 설정 */
+    height: 44.22px; /* 높이 설정 */
+    border: 1px solid #010101; /* 테두리 설정 */
+    margin-top: 10px; /* 상단 여백 설정 */
+    letter-spacing: 0.2em; /* 문자 간격 설정 */
+    text-transform: uppercase; /* 대문자로 변환 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    cursor: pointer; /* 포인터 커서 설정 */
+    overflow: hidden; /* 넘치는 내용 숨김 설정 */
+    position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대 위치 설정 */
+    background-color: rgb(0, 0, 0); /* 배경 색상 설정 */
+    background-position: left bottom; /* 배경 위치 설정 */
 }
 
+/* 구독 버튼 스타일링 */
+.subscribe {
+    position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대 위치 설정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    transform: translateX(0); /* X축 위치 설정 */
+}
+
+.subscribe.subscribeOver {
+    background-color: rgb(0, 0, 0); /* 배경 색상 설정 */
+    filter: invert(100%); /* 색상 반전 필터 적용 */
+    animation: subscribeBT 0.7s infinite; /* 애니메이션 설정 */
+    animation-iteration-count: 1; /* 애니메이션 반복 횟수 설정 */
+}
+
+.subscribe.subscribeOut {
+    animation: subscribeBTOut 0.7s infinite; /* 애니메이션 설정 */
+    animation-iteration-count: 1; /* 애니메이션 반복 횟수 설정 */
+    transform: translateX(100%); /* X축 위치 설정 */
+}
+
+/* 버튼 텍스트 스타일링 */
+.button::after {
+    position: absolute; /* 절대 위치 설정 */
+    top: 50%; /* 상단 위치 설정 */
+    left: 50%; /* 좌측 위치 설정 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    content: "SUBSCRIBE"; /* 버튼 텍스트 설정 */
+    font-family: "Open Sans", sans-serif; /* 폰트 패밀리 설정 */
+    font-weight: 420; /* 폰트 두께 설정 */
+    filter: invert(100%); /* 색상 반전 필터 적용 */
+    color: #000000; /* 텍스트 색상 설정 */
+    transition: all 0.5s; /* 부드러운 트랜지션 설정 */
+}
+
+.button:hover::after {
+    color: #ffffff; /* 호버 시 텍스트 색상 변경 */
+    font-weight: 320; /* 호버 시 폰트 두께 변경 */
+}
+
+/* 애니메이션 설정 */
 @keyframes subscribeBT {
-	0% { 
-		transform: translateX(-100%);
-	}
-	100% {          
-        transform: translateX(-0);
-	}
+    0% { 
+        transform: translateX(-100%); /* 애니메이션 시작 시 X축 위치 설정 */
+    }
+    100% {          
+        transform: translateX(0); /* 애니메이션 종료 시 X축 위치 설정 */
+    }
 }
+
 @keyframes subscribeBTOut {
-	0% { 
-		transform: translateX(0);
-	}
-	100% {          
-        transform: translateX(100%);
-	}
+    0% { 
+        transform: translateX(0); /* 애니메이션 시작 시 X축 위치 설정 */
+    }
+    100% {          
+        transform: translateX(100%); /* 애니메이션 종료 시 X축 위치 설정 */
+    }
 }
+
 @keyframes subscribeBTText {
-	0% { 
-        color: #ffffff;
-	}
-	100% {    
-        color: #ffffff;      
-	}
+    0% { 
+        color: #ffffff; /* 애니메이션 시작 시 텍스트 색상 설정 */
+    }
+    100% {    
+        color: #ffffff; /* 애니메이션 종료 시 텍스트 색상 설정 */
+    }
 }
-
-
-
-
-
 
 /* 사용자 인터페이스가 세밀한 경우의 버튼 스타일 */
 @media screen and (pointer: fine) and (prefers-reduced-motion: no-preference) {
     .features--button-transition :is(.button, .shopify-challenge__button, .shopify-payment-button__button--unbranded):not([disabled]):hover {
-        color: rgb(var(--button-background, 0, 0, 0));
-        background-position: var(--hover-background-position);
-        border-color: rgb(var(--button-background, 0, 0, 0));
-        background-size: 0 100%, 100% 100%;
+        color: rgb(var(--button-background, 0, 0, 0)); /* 호버 시 버튼 색상 설정 */
+        background-position: var(--hover-background-position); /* 배경 위치 설정 */
+        border-color: rgb(var(--button-background, 0, 0, 0)); /* 테두리 색상 설정 */
+        background-size: 0 100%, 100% 100%; /* 배경 크기 설정 */
     }
 }
 
@@ -244,20 +309,20 @@ margin-top: 10px;
 @media screen and (min-width: 1150px) {
     .footer__block-list {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 열의 최소 너비를 조정하여 더 넓은 화면에서 더 많은 블록을 보여줍니다 */
-        column-gap: 1.75rem; /* 열 간격 */
+        column-gap: 1.75rem; /* 열 간격 설정 */
     }
 }
 
 /* 미디어 쿼리 - 화면 너비가 700px 이상인 경우 */
 @media screen and (min-width: 700px) {
     .container {
-        margin: 0 4%;
+        margin: 0 4%; /* 컨테이너 여백 설정 */
     }
     .footer__block--links, .footer__block--image {
-        flex-grow: 0;
-        max-width: 14rem;
+        flex-grow: 0; /* 플렉스 아이템의 크기 조정 설정 */
+        max-width: 14rem; /* 최대 너비 설정 */
     }
     .footer__block {
-        flex: auto;
+        flex: auto; /* 플렉스 아이템의 크기 자동 조정 설정 */
     }
 }
