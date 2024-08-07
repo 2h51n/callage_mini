@@ -1,82 +1,87 @@
 @charset "utf-8";
-/* .furniture_sub */
+
+/* .furniture_sub: 가구 서브 섹션 */
 .furniture_sub {
   position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
-  width: 100%;
-  height: auto;
-  background: #f1f1f1;
+  width: 100%; /* 전체 너비 */
+  height: auto; /* 자동 높이 조정 */
+  background: #f1f1f1; /* 배경색 */
   margin: 0 auto; /* 가로 중앙 정렬 */
-  padding: 20px;
+  padding: 20px; /* 내부 여백 */
 }
 
-/* .furniture_sub_info */
+/* .furniture_sub_info: 가구 서브 정보 영역 */
 .furniture_sub_info {
-  position: relative;
-  width: 100%;
-  max-width: 762px;
-  height: auto;
-  margin: 20px auto; /* 상단 위치 조정 */
-  text-align: center;
+  position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
+  width: 100%; /* 전체 너비 */
+  max-width: 762px; /* 최대 너비 */
+  height: auto; /* 자동 높이 조정 */
+  margin: 20px auto; /* 상단 여백 및 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
 }
 
-/* Shared text styles */
+/* Shared text styles: 공유 텍스트 스타일 */
+
+/* .op_int_txt: 정보 텍스트 */
 .op_int_txt {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0.09em;
-  text-decoration-line: underline;
-  color: rgba(0, 0, 0, 0.6);
+  font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+  font-style: normal; /* 폰트 스타일 설정 */
+  font-weight: 400; /* 폰트 두께 설정 */
+  font-size: 15px; /* 폰트 크기 설정 */
+  line-height: 20px; /* 줄 높이 설정 */
+  letter-spacing: 0.09em; /* 문자 간격 설정 */
+  text-decoration-line: underline; /* 밑줄 추가 */
+  color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 설정 */
 }
 
+/* .op_bk_s_txt: 배경 텍스트 */
 .op_bk_s_txt {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 0.09em;
-  color: #000000;
+  font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+  font-style: normal; /* 폰트 스타일 설정 */
+  font-weight: 300; /* 폰트 두께 설정 */
+  font-size: 18px; /* 폰트 크기 설정 */
+  line-height: 25px; /* 줄 높이 설정 */
+  letter-spacing: 0.09em; /* 문자 간격 설정 */
+  color: #000000; /* 텍스트 색상 설정 */
 }
 
+/* .op_m_txt: 강조 텍스트 */
 .op_m_txt {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  letter-spacing: 0.15em;
-  color: #000000;
+  font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+  font-style: normal; /* 폰트 스타일 설정 */
+  font-weight: 700; /* 폰트 두께 설정 */
+  font-size: 20px; /* 폰트 크기 설정 */
+  line-height: 27px; /* 줄 높이 설정 */
+  letter-spacing: 0.15em; /* 문자 간격 설정 */
+  color: #000000; /* 텍스트 색상 설정 */
 }
 
-/* .furniture_sub_title */
+/* .furniture_sub_title: 가구 서브 제목 */
 .furniture_sub_title {
-  position: relative;
-  width: auto;
-  margin: 10px auto;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 27px;
-  letter-spacing: 0.15em;
-  color: #000000;
+  position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
+  width: auto; /* 너비 자동 조정 */
+  margin: 10px auto; /* 상단 여백 및 가로 중앙 정렬 */
+  font-size: 20px; /* 폰트 크기 설정 */
+  font-weight: 700; /* 폰트 두께 설정 */
+  line-height: 27px; /* 줄 높이 설정 */
+  letter-spacing: 0.15em; /* 문자 간격 설정 */
+  color: #000000; /* 텍스트 색상 설정 */
 }
 
-/* .furniture_sub_txt */
+/* .furniture_sub_txt: 가구 서브 텍스트 */
 .furniture_sub_txt {
-  position: relative;
-  width: 100%;
-  max-width: 762px;
-  margin: 20px auto;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 25px;
-  letter-spacing: 0.09em;
-  color: #000000;
+  position: relative; /* 부모 컨테이너로부터 위치를 기준으로 설정 */
+  width: 100%; /* 전체 너비 */
+  max-width: 762px; /* 최대 너비 */
+  margin: 20px auto; /* 상단 여백 및 가로 중앙 정렬 */
+  font-size: 18px; /* 폰트 크기 설정 */
+  font-weight: 300; /* 폰트 두께 설정 */
+  line-height: 25px; /* 줄 높이 설정 */
+  letter-spacing: 0.09em; /* 문자 간격 설정 */
+  color: #000000; /* 텍스트 색상 설정 */
 }
 
-/* .furniture_sub_link_txt 스타일 */
+/* .furniture_sub_link_txt: 가구 서브 링크 텍스트 */
 .furniture_sub_link_txt {
   display: inline-block; /* 인라인 블록 요소로 설정 */
   font-family: "Open Sans", sans-serif; /* 폰트 설정 */
@@ -88,62 +93,87 @@
   text-decoration: none; /* 기본 상태에서 밑줄 제거 */
   background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 배경 선의 위치 및 크기 설정 */
   transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 */
-  padding: 3px 0; /* 수직 패딩으로 링크와 텍스트의 간격 조정 */
+  padding: 3px 0; /* 수직 패딩으로 링크와 텍스트 간격 조정 */
 }
 
-/* 링크에 커서를 올렸을 때 밑줄 효과 */
+/* .furniture_sub_link_txt:hover: 링크에 커서를 올렸을 때 밑줄 효과 */
 .furniture_sub_link_txt:hover {
   background-size: 0 1px; /* 배경 선의 크기를 0으로 설정하여 사라지게 함 */
 }
 
-/* Media Queries for responsiveness */
+/* 반응형 디자인 */
 
-/* Tablet view */
-@media (max-width: 768px) {
+/* 화면 너비가 1024px 이하인 경우 (타블렛 및 큰 스마트폰) */
+@media (max-width: 1024px) {
   .furniture_sub_info {
-    padding: 10px;
+    padding: 15px; /* 중간 크기 화면에서 여백 조정 */
   }
 
   .op_bk_s_txt,
   .furniture_sub_txt {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 17px; /* 폰트 크기 약간 증가 */
+    line-height: 23px; /* 줄 높이 조정 */
   }
 
   .op_m_txt,
   .furniture_sub_title {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 19px; /* 폰트 크기 약간 증가 */
+    line-height: 26px; /* 줄 높이 조정 */
   }
 
   .op_int_txt,
   .furniture_sub_link_txt {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 13px; /* 폰트 크기 약간 증가 */
+    line-height: 17px; /* 줄 높이 조정 */
   }
 }
 
-/* Mobile view */
-@media (max-width: 480px) {
+/* 화면 너비가 768px 이하인 경우 (작은 타블렛 및 큰 스마트폰) */
+@media (max-width: 768px) {
   .furniture_sub_info {
-    padding: 5px;
+    padding: 10px; /* 작은 화면에서 여백 조정 */
   }
 
   .op_bk_s_txt,
   .furniture_sub_txt {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px; /* 폰트 크기 조정 */
+    line-height: 22px; /* 줄 높이 조정 */
   }
 
   .op_m_txt,
   .furniture_sub_title {
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px; /* 폰트 크기 조정 */
+    line-height: 24px; /* 줄 높이 조정 */
   }
 
   .op_int_txt,
   .furniture_sub_link_txt {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px; /* 폰트 크기 조정 */
+    line-height: 18px; /* 줄 높이 조정 */
+  }
+}
+
+/* 화면 너비가 480px 이하인 경우 (모바일 뷰) */
+@media (max-width: 480px) {
+  .furniture_sub_info {
+    padding: 5px; /* 매우 작은 화면에서 여백 조정 */
+  }
+
+  .op_bk_s_txt,
+  .furniture_sub_txt {
+    font-size: 14px; /* 폰트 크기 조정 */
+    line-height: 20px; /* 줄 높이 조정 */
+  }
+
+  .op_m_txt,
+  .furniture_sub_title {
+    font-size: 16px; /* 폰트 크기 조정 */
+    line-height: 22px; /* 줄 높이 조정 */
+  }
+
+  .op_int_txt,
+  .furniture_sub_link_txt {
+    font-size: 12px; /* 폰트 크기 조정 */
+    line-height: 16px; /* 줄 높이 조정 */
   }
 }

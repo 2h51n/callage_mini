@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* 외부 CSS 파일 불러오기 */
-@import url("responsive.css");
-@import url("normalize.css");
+@import url("furniture_img_banner.css");
 @import url("reset.css");
 @import url("header.css");
 @import url("main-section.css");
