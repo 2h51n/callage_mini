@@ -4,6 +4,7 @@
     height: 50vw;
 }
 .bottom-menu-nav{
+    width: 100%;
     height: 60%;
     display: flex;
         justify-content: center;
@@ -12,14 +13,22 @@
 .bottom-menu-nav > ul{
     width: 80%;
     display: flex;
-    gap: 3%;
+    gap: 1.5%;
 }
 .bottom-menu-nav > ul >li{
-    width: calc(100% /4);
+    width: calc(100% /2);
+}
+.bottom-menu-nav > ul >li> ul{
+    width: 100%;
+    display: flex;
+    gap: 3%;
+}
+.bottom-menu-nav > ul >li> ul > li{
+    width: calc(100% /2);
 }
 
 /* 메뉴 폰트 크기 */
-.bottom-menu-nav > ul >li > a >h1{
+.bottom-menu-nav > ul >li >ul > li> a >h1{
     padding-top: 22px;
     text-align: center;
     color: black;
@@ -33,4 +42,53 @@
 }
 .b-menu-wrap img{
     height: 100%;
+}
+
+@media screen and (max-width:420px){
+    .bottom-menu-section{
+        margin: 50px 0 60px 0;
+        width: 100%;
+        height: 100vw;
+    }
+    .bottom-menu-nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom-menu-nav > ul >li{
+        width: 100%;
+    }
+    .bottom-menu-nav > ul >li> ul{
+        width: 100%;
+        display: flex;
+        gap: 6%;
+    }
+    .bottom-menu-nav > ul >li> ul > li{
+        width: 100%;
+    }
+    .bottom-menu-nav > ul {
+        width: 80%;
+        display: flex;
+        gap: 1.5%;
+        flex-direction: column;
+    }
+    .bottom-menu-nav > ul >li > ul > li > a >h1{
+        padding: 8px 0 10px 0;
+        text-align: center;
+        color: black;
+        font-size: 11px !important;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+    }
+    .b-menu-wrap{
+        width: 100%;
+        height: 37vw;
+        overflow: hidden;
+    }
+    .b-menu-wrap img{
+        width: 100%;
+        height: auto;
+    }
 }

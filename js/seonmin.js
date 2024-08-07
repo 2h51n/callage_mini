@@ -64,6 +64,15 @@ window.onload = function(){
     });
 
 
+    // 히스토리 모바일 창 닫기
+    const historyWindow = this.document.querySelector(".brand-history");
+    const historyClose = this.document.querySelector(".history-close");
+    historyClose.addEventListener("click", function(){
+        historyWindow.style.display = "none"
+    });
+
+
+
     // 푸터 subscribe 버튼 커서
     const subscribeBt = document.querySelector(".button")
     const subscribeBtColor = document.querySelector(".subscribe")
