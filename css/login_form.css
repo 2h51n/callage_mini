@@ -56,6 +56,63 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.log_p{
-    
+
+:root {
+  --input-font-family: 'Open Sans', sans-serif;
+  --input-font-size: 14px;
+  --input-text-color: #6a6a6a;
+  --input-padding-block: 0.5rem;
+  --input-padding-inline: 0.75rem;
+  --input-border-radius: 4px;
+  --input-background: 255, 255, 255;
+}
+
+:is(.input:focus, .textarea:focus, .select:focus-visible) {
+  border-color: currentColor;
+  outline: none;
+}
+
+.input, .textarea, .select, input, #email, #password {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: var(--input-padding-block) var(--input-padding-inline);
+  border-radius: var(--input-border-radius);
+  background: rgb(var(--input-background, transparent));
+  color: rgb(var(--input-text-color, var(--text-color)));
+  text-align: start;
+  border-width: 1px;
+  border-color: #ccc;
+  width: 100%;
+  transition: border-color .1s ease-in-out;
+  font-family: var(--input-font-family);
+  font-size: var(--input-font-size);
+}
+
+input:focus-visible {
+  outline-offset: 0px;
+}
+
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+  overflow-clip-margin: 0px !important;
+  overflow: clip !important;
+}
+
+input[type="email" i] {
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+
+[dir="ltr" i] {
+  unicode-bidi: isolate;
+}
+
+.form_input p{
+  padding-top: 30px;
+}
+.form_input p a{
+font-size: 16px;
+}
+.form_input p a:hover{
+  color: #6a6a6a;
+  transition: all 0.3s;
 }
