@@ -251,21 +251,78 @@
               <ul>
                 <li>
                   <h2>GRAFFITI</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <div class="graffiti-moreBtn ifWindow">
+                    <!-- 그래피티 모바일창 -->
+                    <ul class="graffiti-moreWindow">
+                      <div class="close-moreBtn"><button>‹</button><h3>GRAFFITI</h3></div>
+                      <li>
+                        <h2>Wild Style</h2>
+                      </li>
+                      <li>
+                        <h2>Bubble Letter Style</h2>
+                      </li>
+                      <li>
+                        <h2>Free Style</h2>
+                      </li>
+                      <li>
+                        <h2>Artist</h2>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <h2>FURNITURE</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="furniture-moreBtn ifWindow">
+                    <ul class="furniture-moreWindow">
+                      <h3>FURNITURE</h3>
+                      <li>
+                        <h2>Seating</h2>
+                        <button class="graffiti-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Tables</h2>
+                        <button class="furniture-moreBtn moreBtn">›</button>
+                      </li>
+                    </ul>
+                  </div> -->
                 </li>
                 <li>
                   <h2>HOMEWEAR</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="homewear-moreBtn ifWindow">
+                    <ul class="graffiti-moreWindow">
+                      <h3>GRAFFITI</h3>
+                      <li>
+                        <h2>Wild Style</h2>
+                        <button class="graffiti-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Bubble Letter Style</h2>
+                        <button class="furniture-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Free Style</h2>
+                        <button class="homewear-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Artist</h2>
+                        <button class="interior-moreBtn moreBtn">›</button>
+                      </li>
+                    </ul>
+                  </div> -->
                 </li>
                 <li>
                   <h2>INTERIOR DESIGN</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="interior-moreBtn ifWindow"></div> -->
                 </li>
               </ul>
+              <div class="choose_dollar">
+                <h2>KRW ₩</h2>
+                <span>↓</span>
+              </div>
             </div>
             <!-- 상단 우측 아이콘 리스트 -->
             <div class="header-icon">
@@ -290,12 +347,15 @@
                       <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
                     </svg>
                   </button>
-                  <ul>
-                    <li>
-                      <h2>GRAFFITI</h2>
-                      <button></button>
-                    </li>
-                  </ul>
+                 <div class="cartTitle">
+                      <h2>CART</h2>
+                    </div>
+               <form>
+                    <ul>
+                      <!-- if 구매희망 품목 저장시 js로 li출력 -->
+                    </ul>
+                    <h1 id="cartEmpty">YOUR CART IS EMPTY</h1>
+                  </form>
                 </div>
               </ul>
             </div>
