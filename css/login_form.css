@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 로그인 버튼 */
 .button_log{
-    width: 550px;
+    width: 100%;
     letter-spacing: 0.8rem;
     font-weight: normal;
     background-color: #fff;
@@ -55,4 +55,7 @@
 #password{
     margin-top: 40px;
     margin-bottom: 40px;
+}
+.log_p{
+    
 }

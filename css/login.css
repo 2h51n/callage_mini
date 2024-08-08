@@ -5,7 +5,7 @@
 @import url("log_footer.css");
 @import url("login_form.css");
 /* 모바일 메뉴 css */
-@import url("m-menu.css");
+@import url("log_m-menu.css");
 * {
     margin: 0;
     padding: 0;

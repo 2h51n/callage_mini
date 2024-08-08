@@ -237,48 +237,68 @@
             </div>
             <!-- 모바일 메뉴 리스트 -->
             <button class="m-menuBt">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="m-menu">
-              <button class="closeBt-m">×</button>
-              <ul>
-                <li>
-                  <h2>GRAFFITI</h2>
-                  <button></button>
-                </li>
-                <li>
-                  <h2>FURNITURE</h2>
-                  <button></button>
-                </li>
-                <li>
-                  <h2>HOMEWEAR</h2>
-                  <button></button>
-                </li>
-                <li>
-                  <h2>INTERIOR DESIGN</h2>
-                  <button></button>
-                </li>
-              </ul>
-            </div>
+                <i
+                  ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+                    <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg
+                ></i>
+              </button>
+              <div class="m-menu">
+                <button class="closeBt-m">
+                  <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+                    <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
+                  </svg>
+                </button>
+                <ul>
+                  <li>
+                    <h2>GRAFFITI</h2>
+                    <button></button>
+                  </li>
+                  <li>
+                    <h2>FURNITURE</h2>
+                    <button></button>
+                  </li>
+                  <li>
+                    <h2>HOMEWEAR</h2>
+                    <button></button>
+                  </li>
+                  <li>
+                    <h2>INTERIOR DESIGN</h2>
+                    <button></button>
+                  </li>
+                </ul>
+              </div>
             <!-- 상단 우측 아이콘 리스트 -->
             <div class="header-icon">
-              <ul class="head-icon-listWrap">
-                <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li>
-                  <a href="login.html" class="sidebar-login"><i class="fa-regular fa-user"></i></a>
-                </li>
-                <li><i class="fa-solid fa-cart-shopping cartBt"></i></li>
-                <div class="cartList">
-                  <button class="closeBt-c">×</button>
-                  <ul>
-                    <li>
-                      <h2>GRAFFITI</h2>
-                      <button></button>
-                    </li>
-                  </ul>
-                </div>
-              </ul>
-            </div>
+                <ul class="head-icon-listWrap">
+                  <li>
+                    <i
+                      ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
+                        <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+                        <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path></svg
+                    ></i>
+                  </li>
+                  <li>
+                    <a href="login.html" class="sidebar-login"><i><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
+                      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+                    </svg></i></a>
+                  </li>
+                  <li><i class="cartBt"><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24"><path d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i></li>
+                  <div class="cartList">
+                    <button class="closeBt-c">
+                      <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+                        <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
+                      </svg>
+                    </button>
+                    <ul>
+                      <li>
+                        <h2>GRAFFITI</h2>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
           </div>
           <!-- 배경 이미지 -->
         </div>
@@ -290,7 +310,7 @@
             <div class="container">
               <div class="account-login">
                 <h1 class="h3">LOGIN</h1>
-                <p>Enter your email and password to login:</p>
+                <p class="log_p">Enter your email and password to login:</p>
               </div>
               <div class="form_input">
                 <form id="customer_login">
