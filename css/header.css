@@ -4,6 +4,7 @@
     position: relative;
 }
 .wrap .header-wrap .header{
+    z-index: 9999999999999;
     position: fixed;
         top: 0;
     width: 100%;
