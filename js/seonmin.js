@@ -7,6 +7,7 @@ window.onload = function(){
     });
 
 
+    
     // 모바일 헤더 메뉴 영역
     // 메뉴
     const mBt = this.document.querySelector(".m-menuBt");
@@ -83,22 +84,47 @@ window.onload = function(){
     });
 
 
-    
-    // 메뉴 1 슬라이드 영역
-    // const menu1 = new Swiper(".colorSwiper", {
-    //     slidesPerView: 1,
-    //     grid: {
-    //         rows: 1,
-    //         fill: "row",
-    //     },
-    //     spaceBetween: 30,
-    //     loop: true,
-    //     autoplay: {
-    //         delay: 2500,
-    //         disableOnInteraction: false,
-    //     },
-    // });
+    let currentIndex = 0;
+    let slides = document.querySelectorAll(".colorSwiper-mainImg img");
+    const red = document.querySelector("#red");
+    const white = document.querySelector("#white");
+    const yellow = document.querySelector("#yellow");
+    const blue = document.querySelector("#blue");
+    const black = document.querySelector("#black");
+    // 컬러버튼 이벤트
+    // red.addEventListener("click" , redSlide);
+    // white.addEventListener("click" , whiteSlide);
+    // yellow.addEventListener("click" , yellowSlide);
+    // blue.addEventListener("click" , blueSlide);
+    // black.addEventListener("click" , blackSlide);
 
+    function showSlide(index) {
+        // console.log(index);
+        slides.forEach(function (slide) {
+          //   console.log(slide);
+        slide.classList.remove("active");
+        });
+        slides[index].classList.add("active");
+        }
+
+        // function prevSlide() {
+        //     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        //     console.log(currentIndex);
+        //     showSlide(currentIndex);
+        //     };
+        function nextSlide() {
+            currentIndex = (currentIndex + 1 ) % slides.length;
+            // console.log(currentIndex);
+            showSlide(currentIndex);
+            
+            }
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide , 3000)
+            };
+
+        showSlide(currentIndex);
+        autoSlide();
 
     // 메뉴 2 슬라이드 영역
     const menu2 = new Swiper(".menu-2Img-wrap", {
