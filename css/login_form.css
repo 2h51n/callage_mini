@@ -1,126 +1,61 @@
 @charset "utf-8";
 /* 로그인 버튼 */
-.button_log {
-  width: 100%;
-  letter-spacing: 0.8rem;
-  font-weight: normal;
-  background-color: #fff;
+.button_log{
+    width: 100%;
+    letter-spacing: 0.8rem;
+    font-weight: normal;
+    background-color: #fff;
 }
-.button_log:hover {
-  color: #010101;
-  background-color: #fff;
+.button_log:hover{
+    color: #010101;
+    background-color: #fff;
 }
 
 /* 폼 */
 .anchor {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .section-spacing {
-  padding: 50px 0;
+    padding: 50px 0;
 }
 
 .container {
-  max-width: 100%;
-  margin: 0 8%;
+    max-width: 100%;
+    margin: 0 8%;
 }
 
 .account-login {
-  text-align: center;
-  margin-top: 150px;
+    text-align: center;
+    margin-top: 150px;
 }
 
 .h3 {
-  letter-spacing: 0.2rem;
-  font-size: 21px;
-  font-weight: bold;
-  margin-bottom: 20px;
+    letter-spacing: 0.2rem;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .form_input {
-  text-align: center;
-  margin-top: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .form_input input {
-  width: 100%; /* 너비를 100%로 설정 */
-  height: 45.88px; /* 높이 설정 */
-  padding: 10.4px 12.8px; /* 패딩 설정 */
-  background: none; /* 배경 제거 */
-  border: 0.1px solid #010101; /* 테두리 설정 */
-  opacity: 0.4; /* 투명도 설정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 45.88px; /* 높이 설정 */
+    padding: 10.4px 12.8px; /* 패딩 설정 */
+    background: none; /* 배경 제거 */
+    border: 0.1px solid #010101; /* 테두리 설정 */
+    opacity: 0.4; /* 투명도 설정 */
 }
-#password {
-  margin-top: 40px;
-  margin-bottom: 40px;
+#password{
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.log_p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  color: #1c1b1b;
-}
-
-:root {
-  --input-font-family: "Open Sans", sans-serif;
-  --input-font-size: 14px;
-  --input-text-color: #6a6a6a;
-  --input-padding-block: 0.5rem;
-  --input-padding-inline: 0.75rem;
-  --input-border-radius: 0px;
-  --input-background: 255, 255, 255;
-}
-
-:is(.input:focus, .textarea:focus, .select:focus-visible) {
-  border-color: currentColor;
-  outline: none;
-}
-
-.input,
-.textarea,
-.select,
-input,
-#email,
-#password {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: var(--input-padding-block) var(--input-padding-inline);
-  border-radius: var(--input-border-radius);
-  background: rgb(var(--input-background, transparent));
-  color: rgb(var(--input-text-color, var(--text-color)));
-  text-align: start;
-  border-width: 1px;
-  border-color: #ccc;
-  width: 100%;
-  transition: border-color 0.1s ease-in-out;
-  font-family: var(--input-font-family);
-  font-size: var(--input-font-size);
-}
-
-input:focus-visible {
-  outline-offset: 0px;
-}
-
-input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
-  overflow-clip-margin: 0px !important;
-  overflow: clip !important;
-}
-
-input[type="email" i] {
-  padding-block: 1px;
-  padding-inline: 2px;
-}
-
-[dir="ltr" i] {
-  unicode-bidi: isolate;
-}
-
-.form_input > p {
-  margin-top: 30px;
-}
-.form_input  a:hover {
-  color: #6a6a6a;
-  transition: all 0.3s;
+.log_p{
+    
 }
