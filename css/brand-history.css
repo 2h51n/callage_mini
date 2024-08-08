@@ -69,7 +69,12 @@
         height: 100%;
     }
     .history-text-wrap{
+        padding: 10px;
         height: 100%;
+    }
+    .history-text-wrap p{
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 16px;
     }
 }
 @media (max-width: 420px) {

@@ -1,6 +1,7 @@
 @charset "utf-8";
 .menu-1{
     width: 100%;
+    position: relative;
     /* max-height: 1000px;
     height: 80vw; */
 }
@@ -45,7 +46,7 @@
         justify-content: center;
         gap: 6%;
     width: 100%;
-    height: 48.5vw;
+    height: auto;
 }
 
 /* 설명(택스트) */
@@ -64,13 +65,13 @@
 .colorSwiper-subText > p{
     font-size: 18px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 2;
     letter-spacing: 0.09em;
 }
 .colorSwiper-subText> a{
     font-size: 14px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 2;
     letter-spacing: 0.09em;
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.6);
@@ -136,8 +137,40 @@
     .colorSwiper-subText> a{
         font-size: 13px;
     }
+    .colorSwiper-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6%;
+        width: 100%;
+        height: auto;
+    }
+    .colorSwiper-subImg{
+        height: auto;
+        overflow: hidden;
+    }
 }
 @media screen and (max-width:768px){
+    .colorSwiper-mainImg{
+        margin-top: 190px;
+    }
+    .colorSwiper-subImg{
+        display: none !important;
+    }
+    .colorSwiper-contents {
+        height: 5px;
+        padding: 15px 0 20px 0;
+    }
+    .colorSwiper-contents > .colorSwiper-subText{
+        position: absolute;
+        top: 25px;
+    }
+    .colorSwiper-subText > p{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: 0.09em;
+    }
     .colorinterior{
         width: 90%;
         height: auto;
@@ -150,4 +183,30 @@
     }
 }
 @media screen and (max-width:420px){
+    .colorSwiper-mainImg{
+        margin-top: 180px;
+        height: 400px !important;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .colorSwiper-contents > .colorSwiper-subText{
+        position: absolute;
+        top: 25px;
+    }
+    .colorSwiper-subText > h2{
+        font-size: 14px ;
+    }
+    .colorSwiper-subText > p{
+        font-size: 12px;
+    }
+    .colorSwiper-subText> a{
+        font-size: 12px;
+    }
+    .colorSwiper-subImg{
+        height: 170px;
+        overflow: hidden;
+        align-items: center !important;
+    }
 }

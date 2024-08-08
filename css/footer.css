@@ -198,34 +198,7 @@
 }
 
 
-.button::after{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: "SUBSCRIBE";
-    font-family: "Open Sans", sans-serif;
-    font-weight: 420;
-    filter: invert(100%);
-    color: #000000;
-    transition: all 0.5s;
-}
-.button:hover::after{
-    color: #ffffff;
-    font-weight: 320;
-    width: 146.33px; /* 너비 설정 */
-    height: 44.22px; /* 높이 설정 */
-    border: 1px solid #010101; /* 테두리 설정 */
-    margin-top: 10px; /* 상단 여백 설정 */
-    letter-spacing: 0.2em; /* 문자 간격 설정 */
-    text-transform: uppercase; /* 대문자로 변환 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    cursor: pointer; /* 포인터 커서 설정 */
-    overflow: hidden; /* 넘치는 내용 숨김 설정 */
-    position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대 위치 설정 */
-    background-color: rgb(0, 0, 0); /* 배경 색상 설정 */
-    background-position: left bottom; /* 배경 위치 설정 */
-}
+
 
 /* 구독 버튼 스타일링 */
 .subscribe {
@@ -295,15 +268,6 @@
     }
 }
 
-/* 사용자 인터페이스가 세밀한 경우의 버튼 스타일 */
-@media screen and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-    .features--button-transition :is(.button, .shopify-challenge__button, .shopify-payment-button__button--unbranded):not([disabled]):hover {
-        color: rgb(var(--button-background, 0, 0, 0)); /* 호버 시 버튼 색상 설정 */
-        background-position: var(--hover-background-position); /* 배경 위치 설정 */
-        border-color: rgb(var(--button-background, 0, 0, 0)); /* 테두리 색상 설정 */
-        background-size: 0 100%, 100% 100%; /* 배경 크기 설정 */
-    }
-}
 
 /* 미디어 쿼리 - 화면 너비가 1150px 이상인 경우 */
 @media screen and (min-width: 1150px) {

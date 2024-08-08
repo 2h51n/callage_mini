@@ -43,15 +43,15 @@
     letter-spacing: 0.15rem;
 }
 .menu-2Text-wrap > p{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 2;
     letter-spacing: 0.09em;
 }
 .menu-2Text-wrap > a{
     font-size: 14px;
     font-weight: 300;
-    line-height: 25px;
+    line-height: 2;
     letter-spacing: 0.09em;
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.6);
@@ -90,6 +90,32 @@
         width: 90%;
         height: auto;
     }
+    .menu-2Text-wrap{
+        width: 100%;
+    }
+    .menu-2Text-wrap > h2{
+        height: 30px;
+        font-size: 14px ;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+    }
+    .menu-2Text-wrap > p{
+        height: auto;
+        max-height: 220px;
+        width: 100%;
+        line-height: 1.4;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+    .menu-2Text-wrap > a{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 0.09em;
+    }
 }
 @media screen and (max-width:430px){
     .menu-2Wrap{
@@ -114,19 +140,15 @@
         letter-spacing: 0.15rem;
     }
     .menu-2Text-wrap > p{
-        height: 170px;
+        height: 120px;
         font-size: 12px;
-        font-weight: 300;
-        line-height: 25px;
-        letter-spacing: 0.09em;
+        line-height: 17px;
     }
     .menu-2Text-wrap > a{
         font-size: 12px;
         font-weight: 300;
         line-height: 25px;
         letter-spacing: 0.09em;
-        text-decoration: underline;
-        color: rgba(0, 0, 0, 0.6);
     }
 
     .menu-2Img-wrap{
