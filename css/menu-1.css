@@ -24,16 +24,30 @@
     gap: 2%;
     overflow: hidden;
 }
-/* 메인 이미지 */
+
+
+/* 메인 이미지 ================================================================================================================================*/
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-mainImg{
+    position: relative;
     width: 100%;
     height: 48.5vw;
+    display: flex;
 }
-.colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-mainImg> img{
+.colorSwiper-mainImg img{
     width: 100%;
+    display: none;
 }
+.colorSwiper-mainImg img.active {
+    display: block;
+}
+
+
+
+
+
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
     width: 100%;
+    height: 90%;
     display: flex;
         align-items: flex-end;
         gap: 4%;
@@ -95,6 +109,45 @@
 }
 
 
+
+
+
+/* 컬러 버튼 */
+.colorSwiper-colorBtn{
+    margin-top: 15px;
+    width: 100%;
+    height: 25px;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+.colorSwiper-colorBtn > .colorBtn{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 3px 1px #00000040;
+}
+#red{
+    background-color: red;
+    width: 75%;
+}
+#white{
+    background-color: #ccc;
+}
+#yellow{
+    background-color: yellow
+}
+#blue{
+    background-color: blue
+}
+#black{
+    background-color: black
+}
+
+
+
 /* 포커스 라인 */
 .focusLine{
     width: 0;
@@ -109,6 +162,17 @@
     height: 2px ;
 }
 
+@media screen and (max-width:1400px){
+    .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
+        width: 100%;
+        height: 80%;
+        max-height: 360px;
+        overflow: hidden;
+        display: flex;
+            align-items: flex-end;
+            gap: 4%;
+    }
+}
 @media screen and (max-width:1280px){
     .colorinterior{
         width: 80%;
@@ -116,6 +180,13 @@
     }
     .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-mainImg {
         height: auto;
+    }
+    .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
+        width: 100%;
+        height: 90%;
+        display: flex;
+            align-items: flex-end;
+            gap: 4%;
     }
 }
 @media screen and (max-width:1024px){
