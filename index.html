@@ -13,23 +13,23 @@
     <meta property="og:site_name" content="CALLAGE" />
     <meta property="og:type" content="website" />
     <!-- 파비콘 적용 -->
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
     <!-- 타이틀 -->
     <title>CALLAGE</title>
     <!-- css적용 -->
@@ -244,35 +244,100 @@
               <ul>
                 <li>
                   <h2>GRAFFITI</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <div class="graffiti-moreBtn ifWindow">
+                    <!-- 그래피티 모바일창 -->
+                    <ul class="graffiti-moreWindow">
+                      <div class="close-moreBtn"><button>‹</button><h3>GRAFFITI</h3></div>
+                      <li>
+                        <h2>Wild Style</h2>
+                      </li>
+                      <li>
+                        <h2>Bubble Letter Style</h2>
+                      </li>
+                      <li>
+                        <h2>Free Style</h2>
+                      </li>
+                      <li>
+                        <h2>Artist</h2>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
                   <h2>FURNITURE</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="furniture-moreBtn ifWindow">
+                    <ul class="furniture-moreWindow">
+                      <h3>FURNITURE</h3>
+                      <li>
+                        <h2>Seating</h2>
+                        <button class="graffiti-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Tables</h2>
+                        <button class="furniture-moreBtn moreBtn">›</button>
+                      </li>
+                    </ul>
+                  </div> -->
                 </li>
                 <li>
                   <h2>HOMEWEAR</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="homewear-moreBtn ifWindow">
+                    <ul class="graffiti-moreWindow">
+                      <h3>GRAFFITI</h3>
+                      <li>
+                        <h2>Wild Style</h2>
+                        <button class="graffiti-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Bubble Letter Style</h2>
+                        <button class="furniture-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Free Style</h2>
+                        <button class="homewear-moreBtn moreBtn">›</button>
+                      </li>
+                      <li>
+                        <h2>Artist</h2>
+                        <button class="interior-moreBtn moreBtn">›</button>
+                      </li>
+                    </ul>
+                  </div> -->
                 </li>
                 <li>
                   <h2>INTERIOR DESIGN</h2>
-                  <button></button>
+                  <button class="moreBtn">›</button>
+                  <!-- <div class="interior-moreBtn ifWindow"></div> -->
                 </li>
               </ul>
+              <div class="choose_dollar">
+                <h2>KRW ₩</h2>
+                <span>↓</span>
+              </div>
             </div>
             <!-- 상단 우측 아이콘 리스트 -->
             <div class="header-icon">
               <ul class="head-icon-listWrap">
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><a href="login.html" class="sidebar-login"><i class="fa-regular fa-user"></i></a></li>                <li><i class="fa-solid fa-cart-shopping cartBt"></i></li>
+                <li>
+                  <a href="login.html" class="sidebar-login"><i class="fa-regular fa-user"></i></a>
+                </li>
+                <li><i class="fa-solid fa-cart-shopping cartBt"></i></li>
                 <div class="cartList">
-                  <button class="closeBt-c">×</button>
-                  <ul>
-                    <li>
-                      <h2>GRAFFITI</h2>
-                      <button></button>
-                    </li>
-                  </ul>
+                  <div class="cartTitle-wrap">
+                    <button class="closeBt-c">×</button>
+                    <div class="cartTitle">
+                      <h2>CART</h2>
+                    </div>
+                  </div>
+                  <form>
+                    <ul>
+                      <!-- if 구매희망 품목 저장시 js로 li출력 -->
+                    </ul>
+                    <h1 id="cartEmpty">YOUR CART IS EMPTY</h1>
+                  </form>
                 </div>
               </ul>
             </div>

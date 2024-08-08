@@ -14,6 +14,7 @@ window.onload = function(){
     const htmlRoot = this.document.querySelector("html");
     const closeBtM = this.document.querySelector(".closeBt-m");
     const closeBtC = this.document.querySelector(".closeBt-c");
+    const closeMoreBtn = this.document.querySelector(".close-moreBtn")
     // 메뉴 또는 카트 클릭시 body의 백그라운드가 어둡게 변함
     const btBlur = this.document.querySelector("html");
 
@@ -33,6 +34,16 @@ window.onload = function(){
             btBlur.classList.remove("bt-blur");
         }
     });
+
+    // // 모바일 메뉴 클릭시 해당하는 메뉴의 서브 메뉴창의 display가 block이 된다
+    // const ifWindow = document.querySelector(".m-menu > ul > li .ifWindow");
+    // const mMenuUlLi = this.document.querySelector(".m-menu > ul > li");
+    // mMenuUlLi.addEventListener("click", function(){
+    //     ifWindow.style.display = "block"
+    // })
+    // closeMoreBtn.addEventListener("click", function(){
+    //     ifWindow.style.display = "none"
+    // })
 
     //카트(장바구니)
     const cartBt = this.document.querySelector(".cartBt");
