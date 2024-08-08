@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* 외부 CSS 파일 불러오기 */
-@import url("furniture_img_banner.css");
 @import url("reset.css");
 @import url("header.css");
 @import url("main-section.css");
@@ -12,6 +11,7 @@
 @import url("menu-2.css");
 @import url("furniture.css");
 @import url("furniture_sub.css");
+@import url("furniture_img_banner.css");
 @import url("divider line.css");
 @import url("homewear.css");
 @import url("brand-copy.css");
@@ -29,6 +29,10 @@
 
 a , h1, h2 , h3, h4, h5, h6 ,p{
   font-family: "Open Sans", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 html.m-menuActive{

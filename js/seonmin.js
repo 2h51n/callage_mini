@@ -72,20 +72,6 @@ window.onload = function(){
     });
 
 
-
-    // 푸터 subscribe 버튼 커서
-    const subscribeBt = document.querySelector(".button")
-    const subscribeBtColor = document.querySelector(".subscribe")
-    subscribeBt.addEventListener("mouseover", function(){
-        subscribeBtColor.classList.add("subscribeOver");
-        subscribeBtColor.classList.remove("subscribeOut");
-    });
-    subscribeBt.addEventListener("mouseout", function(){
-        subscribeBtColor.classList.add("subscribeOut");
-    });
-
-
-
     
     // 메뉴 1 슬라이드 영역
     // const menu1 = new Swiper(".colorSwiper", {
