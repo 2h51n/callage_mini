@@ -64,7 +64,7 @@
   text-transform: uppercase; /* 대문자로 변환 */
   text-decoration: underline; /* 밑줄 추가 */
   color: #666; /* 텍스트 색상 회색 */
-  font-size: 15px; /* 폰트 크기 15px */
+  font-size: 13px; /* 폰트 크기 15px */
   font-weight: 400; /* 폰트 두께 400 */
   line-height: 1.6; /* 줄 높이 1.6 */
   letter-spacing: 2px; /* 문자 간격 설정 */
