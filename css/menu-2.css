@@ -33,6 +33,7 @@
     display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 13px;
     text-align: center;
     height: auto;
@@ -48,13 +49,25 @@
     line-height: 2;
     letter-spacing: 0.09em;
 }
-.menu-2Text-wrap > a{
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 2;
-    letter-spacing: 0.09em;
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.6);
+.menu-2Text-wrap .sub_link_txt > a{
+    color: #000;
+}
+.menu-2Text-wrap .sub_link_txt{
+    width: 120px;
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    font-family: "Open Sans", sans-serif; /* 폰트 설정 */
+    font-weight: 400; /* 폰트 두께 설정 */
+    font-size: 15px; /* 폰트 크기 설정 */
+    line-height: 20px; /* 줄 높이 설정 */
+    letter-spacing: 0.09em; /* 문자 간격 설정 */
+    color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 설정 */
+    text-decoration: none; /* 기본 상태에서 밑줄 제거 */
+    background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 배경 선의 위치 및 크기 설정 */
+    transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 */
+    padding: 3px 0; /* 수직 패딩으로 링크와 텍스트 간격 조정 */
+}
+.sub_link_txt:hover {
+    background-size: 0 1px; /* 배경 선의 크기를 0으로 설정하여 사라지게 함 */
 }
 
 .menu-2 > .focusLine{

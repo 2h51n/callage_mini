@@ -65,7 +65,7 @@
             <div class="header-menu">
               <ul class="head-menu-listWrap">
                 <!-- 그래피티 및 벽지 -->
-                <a href="index.html" class="mini_logo"><img src="img/logo-img/mini_logo.png" alt=""></a>
+                <a href="index.html" class="mini_logo"><img src="img/logo-img/mini_logo.png" alt="" /></a>
                 <li class="graffiti-menu">
                   <a href="#" class="subHover"><h2>GRAFFITI</h2></a
                   ><!-- 그래피티 | 벽지-->
@@ -256,7 +256,10 @@
                   <div class="graffiti-moreBtn ifWindow">
                     <!-- 그래피티 모바일창 -->
                     <ul class="graffiti-moreWindow">
-                      <div class="close-moreBtn"><button>‹</button><h3>GRAFFITI</h3></div>
+                      <div class="close-moreBtn">
+                        <button>‹</button>
+                        <h3>GRAFFITI</h3>
+                      </div>
                       <li>
                         <h2>Wild Style</h2>
                       </li>
@@ -329,29 +332,59 @@
             <div class="header-icon">
               <ul class="head-icon-listWrap">
                 <li>
-                  <i
+                  <i class="search-btn"
                     ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
                       <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
                       <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path></svg
                   ></i>
                 </li>
+                <div class="search-bar">
+                  <form class="search-bar-form">
+                    <button class="search-bar-btn">
+                      <i
+                        ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
+                          <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+                          <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path></svg
+                      ></i>
+                    </button>
+                    <input type="text" placeholder="SEARCH" />
+                    <button class="search-bar-xbtn">
+                      <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+                        <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
                 <li>
-                  <a href="login.html" class="sidebar-login"><i><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
-                    <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
-                  </svg></i></a>
+                  <a href="login.html" class="sidebar-login"
+                    ><i
+                      ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
+                        <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path></svg></i
+                  ></a>
                 </li>
-                <li><i class="cartBt"><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24"><path d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i></li>
+                <li>
+                  <i class="cartBt"
+                    ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24">
+                      <path
+                        d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path></svg
+                  ></i>
+                </li>
                 <div class="cartList">
                   <button class="closeBt-c">
                     <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
                       <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
                     </svg>
                   </button>
-                 <div class="cartTitle">
-                      <h2>CART</h2>
-                    </div>
-               <form>
+                  <div class="cartTitle">
+                    <h2>CART</h2>
+                  </div>
+                  <form>
                     <ul>
                       <!-- if 구매희망 품목 저장시 js로 li출력 -->
                     </ul>
@@ -440,22 +473,28 @@
               <div class="swiper-slide">
                 <div class="colorSwiper-mainImg">
                   <img src="img/subimg1.png" alt="컬러 슬라이드 메인이미지" />
-                  <img src="img/subimg1.png" alt="컬러 슬라이드 메인이미지" />
-                  <img src="img/subimg1.png" alt="컬러 슬라이드 메인이미지" />
-                  <img src="img/subimg1.png" alt="컬러 슬라이드 메인이미지" />
+                  <img src="img/colorswiper/bkwt_main.jpg" alt="컬러 슬라이드 메인이미지" />
+                  <img src="img/colorswiper/yellow_main.jpg" alt="컬러 슬라이드 메인이미지" />
+                  <img src="img/colorswiper/blue_main.jpg" alt="컬러 슬라이드 메인이미지" />
                 </div>
                 <div class="colorSwiper-contents">
                   <div class="colorSwiper-subText">
                     <h2>COLOR PALETTE</h2>
                     <p>Loud lines meet generous shapes and relaxed fits, with a neutral palette of flint and chalky lines, pieces can be paired or layered without shouting. Build your own set or suit from a capsule of separates.</p>
-                    <a href="#">READ MORE</a>
+                    <div class="sub_link_txt"><a href="#">READ MORE</a></div>
                   </div>
                   <div class="colorSwiper-subImg">
                     <div class="cssi-1">
                       <img src="img/subimg2.png" alt="컬러 슬라이드 서브 이미지1" />
+                      <img src="img/colorswiper/bkwt_sub1.jpg" alt="컬러 슬라이드 서브 이미지1" />
+                      <img src="img/colorswiper/yellow_sub1.jpg" alt="컬러 슬라이드 서브 이미지1" />
+                      <img src="img/colorswiper/blue_sub1.jpg" alt="컬러 슬라이드 서브 이미지1" />
                     </div>
                     <div class="cssi-2">
                       <img src="img/subimg3.png" alt="컬러 슬라이드 서브 이미지2" />
+                      <img src="img/colorswiper/bkwt_sub2.jpg" alt="컬러 슬라이드 서브 이미지2" />
+                      <img src="img/colorswiper/yellow_sub2.jpg" alt="컬러 슬라이드 서브 이미지2" />
+                      <img src="img/colorswiper/blue_sub2.jpg" alt="컬러 슬라이드 서브 이미지2" />
                     </div>
                   </div>
                   <div class="colorSwiper-colorBtn">
@@ -493,7 +532,7 @@
               COLLAGE is a collaboration between FRAMA and designer Faye Toogood’s London studio. With a shared reverence for creative process and distinct but complementary design aesthetics, the two studios collaborated for the first time to present an amplified view of one of our most human
               experiences: sharing a meal.
             </p>
-            <a href="#">DISCOVER HERE</a>
+            <div class="sub_link_txt"><a href="#">DISCOVER HERE</a></div>
           </div>
         </div>
         <div class="focusLine"></div>
