@@ -60,6 +60,24 @@ a {
   padding: 0 40px;
   letter-spacing: 0.1em;
 }
+.menu-hover.white-fixed{
+  background-color: white;
+  position: absolute;
+  top:-73px;
+  width: 100%;
+  z-index: 99999999;
+}
+.menu-hover.white-fixed li > a > h2{
+  color: rgb(0, 0, 0);
+}
+.menu-hover.white-fixed  i {
+  color: rgb(0, 0, 0);
+}
+.menu-hover.white-fixed  button > i {
+  color: rgb(0, 0, 0);
+}
+
+
 .head-menu-listWrap > li {
   height: 73px;
   padding: 30px 0;
@@ -80,12 +98,30 @@ a {
 .subDisplay {
   z-index: 9;
   opacity: 0;
-  transition: all 0.5s;
+  display: none;
+  transition: all 0.3s ease-out;
+
+}
+@keyframes subdis{
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  100%{
+    display: block;
+    opacity: 1;
+  }
 }
 
 .header-menu > .head-menu-listWrap > li:hover > .subDisplay {
   opacity: 1;
+  display: block;
   z-index: 99;
+  animation: subdis 0.4s infinite;
+  animation-iteration-count : 1 ;
+}
+.header-menu > .head-menu-listWrap > li:hover > .subDisplay.hidden {
+  display: block;
 }
 .header-menu > .head-menu-listWrap > li > .subHover > h2 {
   position: relative;
@@ -117,7 +153,7 @@ a {
   left: 0;
   background-color: white;
   text-align: left;
-  z-index: 1;
+  z-index: 9999999999;
   box-shadow: 0 2px 2px 1px #00000025;
 }
 .header-submenu a {
@@ -220,6 +256,9 @@ a {
   height: 100%;
   position: relative;
 }
+.main-logo.logo-margin{
+  margin-top: 96px;
+}
 .main-logo img {
   width: 40%;
   position: absolute;
@@ -227,6 +266,66 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(1px 1px 2px #00000042);
+}
+
+.search-bar{
+  z-index: 9;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top:73px;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+}
+.search-bar.search-active{
+  opacity: 1;
+  animation: search-MovingA 0.5s infinite;
+  animation-iteration-count : 1 ;
+}
+@keyframes search-MovingA {
+	0% { 
+		transform: translateY(-100%);
+    opacity: 0;
+	}
+	100% {          
+    transform: translateY(0);
+    opacity: 1;
+	}
+}
+
+
+.search-bar-form{
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin: 50px auto;
+  height: 40px;
+  background-color: aqua;
+}
+.search-bar-form input{
+  flex:1;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+.search-bar-form input:placeholder-shown{
+  font-size: 19px;
+  font-weight: 350;
+  letter-spacing: 0.2em;
+  font-family: "Open Sans", sans-serif;
+}
+.search-bar-btn{
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+.search-bar-xbtn{
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (max-width: 1400px) {

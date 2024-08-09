@@ -1,7 +1,10 @@
 // 헤더 메뉴
 window.onload = function(){
     const mainMenu = document.querySelector(".subHover");
+    const subDisplay = document.querySelector(".subDisplay")
     const subMenu = document.querySelector(".header-submenu");
+    const menuHover = document.querySelector(".menu-hover");
+    const mainLogo = document.querySelector(".main-logo");
     mainMenu.addEventListener("click", function(){
         subMenu.classList.toggle("hovering")
     });
@@ -46,6 +49,32 @@ window.onload = function(){
     //     ifWindow.style.display = "none"
     // })
 
+    // 검색
+    const searchBtn = this.document.querySelector(".search-btn");
+    const searchXBtn = this.document.querySelector(".search-xbtn");
+    const searchBar = this.document.querySelector(".search-bar");
+    searchBtn.addEventListener("click", function(event) {
+        // 각 요소의 클래스에 대해 toggle 메서드를 사용하여 추가/제거를 처리합니다.
+            searchBar.classList.toggle("search-active");
+            btBlur.classList.toggle("bt-blur");
+            htmlRoot.classList.toggle("m-menuActive");
+            menuHover.classList.toggle("white-fixed");
+            mainLogo.classList.toggle("logo-margin");
+            subDisplay.classList.toggle("hidden");
+            event.stopPropagation(); // 이벤트 버블링을 막아 document 클릭 이벤트에 의해 닫히지 않도록 함
+    });
+    document.addEventListener("click", function(event) {
+        // 클릭한 요소가 searchBtn, searchBar 또는 menuHover 내부에 속하지 않는지 확인
+        if (!searchBar.contains(event.target) && !searchBtn.contains(event.target) && !menuHover.contains(event.target)) {
+            searchBar.classList.remove("search-active");
+            btBlur.classList.remove("bt-blur");
+            htmlRoot.classList.remove("m-menuActive");
+            menuHover.classList.remove("white-fixed");
+            mainLogo.classList.remove("logo-margin");
+            event.stopPropagation();
+        }
+    });
+
     //카트(장바구니)
     const cartBt = this.document.querySelector(".cartBt");
     const cartList = this.document.querySelector(".cartList");
@@ -86,6 +115,8 @@ window.onload = function(){
 
     let currentIndex = 0;
     let slides = document.querySelectorAll(".colorSwiper-mainImg img");
+    let slidesSub1 = document.querySelectorAll(".colorSwiper-subImg .cssi-1 img");
+    let slidesSub2 = document.querySelectorAll(".colorSwiper-subImg .cssi-2 img");
     const red = document.querySelector("#red");
     const white = document.querySelector("#white");
     const yellow = document.querySelector("#yellow");
@@ -107,6 +138,23 @@ window.onload = function(){
         slides[index].classList.add("active");
         }
 
+    function showSlideSub1(index) {
+        // console.log(index);
+        slidesSub1.forEach(function (slidesub1) {
+          //   console.log(slide);
+        slidesub1.classList.remove("active1");
+        });
+        slidesSub1[index].classList.add("active1");
+        }
+    function showSlideSub2(index) {
+        // console.log(index);
+        slidesSub2.forEach(function (slidesub2) {
+          //   console.log(slide);
+        slidesub2.classList.remove("active2");
+        });
+        slidesSub2[index].classList.add("active2");
+        }
+
         // function prevSlide() {
         //     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         //     console.log(currentIndex);
@@ -116,6 +164,8 @@ window.onload = function(){
             currentIndex = (currentIndex + 1 ) % slides.length;
             // console.log(currentIndex);
             showSlide(currentIndex);
+            showSlideSub1(currentIndex);
+            showSlideSub2(currentIndex);
             
             }
         function autoSlide() {
@@ -124,6 +174,8 @@ window.onload = function(){
             };
 
         showSlide(currentIndex);
+        showSlideSub1(currentIndex);
+        showSlideSub2(currentIndex);
         autoSlide();
 
     // 메뉴 2 슬라이드 영역
