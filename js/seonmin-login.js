@@ -8,8 +8,6 @@ window.onload = function(){
     mainMenu.addEventListener("click", function(){
         subMenu.classList.toggle("hovering")
     });
-
-
     
     // 모바일 헤더 메뉴 영역
     // 메뉴
