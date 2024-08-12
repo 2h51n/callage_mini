@@ -117,17 +117,6 @@ window.onload = function(){
     let slides = document.querySelectorAll(".colorSwiper-mainImg img");
     let slidesSub1 = document.querySelectorAll(".colorSwiper-subImg .cssi-1 img");
     let slidesSub2 = document.querySelectorAll(".colorSwiper-subImg .cssi-2 img");
-    const red = document.querySelector("#red");
-    const white = document.querySelector("#white");
-    const yellow = document.querySelector("#yellow");
-    const blue = document.querySelector("#blue");
-    const black = document.querySelector("#black");
-    // 컬러버튼 이벤트
-    // red.addEventListener("click" , redSlide);
-    // white.addEventListener("click" , whiteSlide);
-    // yellow.addEventListener("click" , yellowSlide);
-    // blue.addEventListener("click" , blueSlide);
-    // black.addEventListener("click" , blackSlide);
 
     function showSlide(index) {
         // console.log(index);
@@ -177,6 +166,52 @@ window.onload = function(){
         showSlideSub1(currentIndex);
         showSlideSub2(currentIndex);
         autoSlide();
+
+
+        // 컬러버튼 이벤트
+        const red = document.querySelector("#red");
+        const white = document.querySelector("#white");
+        const yellow = document.querySelector("#yellow");
+        const blue = document.querySelector("#blue");
+        const black = document.querySelector("#black");
+        // 슬라이드 함수
+        const redImg = document.querySelectorAll(".redImgs")
+        const whiteImg = document.querySelectorAll(".whiteImgs")
+        const yellowImg = document.querySelectorAll(".yellowImgs")
+        const blueImg = document.querySelectorAll(".blueImgs")
+        const blackImg = document.querySelectorAll(".blackImgs")
+        function hideAllImages() {
+            redImg.forEach(img => img.style.display = "none");
+            whiteImg.forEach(img => img.style.display = "none");
+            yellowImg.forEach(img => img.style.display = "none");
+            blueImg.forEach(img => img.style.display = "none");
+            blackImg.forEach(img => img.style.display = "none");
+        }
+        
+        red.addEventListener("click", function() {
+            hideAllImages();
+            redImg.forEach(img => img.style.display = "block");
+        });
+        
+        white.addEventListener("click", function() {
+            hideAllImages();
+            whiteImg.forEach(img => img.style.display = "block");
+        });
+        
+        yellow.addEventListener("click", function() {
+            hideAllImages();
+            yellowImg.forEach(img => img.style.display = "block");
+        });
+        
+        blue.addEventListener("click", function() {
+            hideAllImages();
+            blueImg.forEach(img => img.style.display = "block");
+        });
+        
+        black.addEventListener("click", function() {
+            hideAllImages();
+            blackImg.forEach(img => img.style.display = "block");
+        });
 
     // 메뉴 2 슬라이드 영역
     const menu2 = new Swiper(".menu-2Img-wrap", {
