@@ -32,13 +32,11 @@
     width: 100%;
     height: 48.5vw;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:  0 0 2px 1px rgba(0, 0, 0, 0.12);
 }
 .colorSwiper-mainImg img{
     width: 100%;
-    display: none;
-}
-.colorSwiper-mainImg img.active {
-    display: block;
 }
 
 
@@ -103,7 +101,7 @@
 /* 서브 이미지1 */
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
     width: 100%;
-    height: 90%;
+    height: 70%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -114,15 +112,11 @@
     height: 100%;
     max-height: 450px;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:  0 0 2px 1px rgba(0, 0, 0, 0.12);
 }
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg > .cssi-1 img{
     width: 100%;
-}
-.colorSwiper-subImg .cssi-1 img{
-    display: none;
-}
-.colorSwiper-subImg .cssi-1 img.active1{
-    display: block;
 }
 /* 서브 이미지2 */
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg > .cssi-2{
@@ -130,19 +124,33 @@
     height: 100%;
     max-height: 450px;
     overflow: hidden;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:  0 0 2px 1px rgba(0, 0, 0, 0.12);
 }
 .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg > .cssi-2 img{
     width: 100%;
 }
-.colorSwiper-subImg .cssi-2 img{
+/* 모든 이미지를 기본적으로 숨깁니다 */
+.redImgs, .whiteImgs, .yellowImgs, .blueImgs, .blackImgs {
     display: none;
+    animation: color-Active 1s infinite;
+    animation-iteration-count: 1;
 }
-.colorSwiper-subImg .cssi-2 img.active2{
+
+/* color-active 클래스가 있는 이미지는 보이도록 설정 */
+.color-active {
     display: block;
 }
-
-
-
+@keyframes color-Active {
+    0%{
+        opacity: 0;
+        transition: all 1s ;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 /* 컬러 버튼 */
@@ -162,21 +170,47 @@
     background-color: rgb(0, 0, 0);
     box-shadow: 1px 1px 3px 1px #00000040;
 }
+
+
+
 #red{
     background-color: red;
+    transition: all 0.2s ease-in;
+}
+#red.button-width{
     width: 75%;
 }
 #white{
     background-color: #ccc;
+    transition: all 0.1s ease-in;
+}
+#white.button-width{
+    background-color: #ccc;
+    width: 75%;
 }
 #yellow{
-    background-color: yellow
+    background-color: yellow;
+    transition: all 0.1s ease-in;
+}
+#yellow.button-width{
+    background-color: yellow;
+    width: 75%;
 }
 #blue{
-    background-color: blue
+    background-color: blue;
+    transition: all 0.1s ease-in;
+}
+#blue.button-width{
+    background-color: blue;
+    width: 75%;
 }
 #black{
-    background-color: black
+    background-color: black;
+    transition: all 0.1s ease-in;
+}
+#black.button-width{
+    background-color: black;
+    width: 75%;
 }
 
 
@@ -195,11 +229,22 @@
     height: 2px ;
 }
 
+@media screen and (max-width:1500px){
+    .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
+        width: 100%;
+        height: 70% !important;
+        max-height: 380px;
+        overflow: hidden;
+        display: flex;
+            align-items: flex-end;
+            gap: 4%;
+    }
+}
 @media screen and (max-width:1400px){
     .colorSwiper > .swiper-wrapper >.swiper-slide> .colorSwiper-contents > .colorSwiper-subImg{
         width: 100%;
-        height: 80%;
-        max-height: 360px;
+        height: 60%;
+        max-height: 340px !important;
         overflow: hidden;
         display: flex;
             align-items: flex-end;
@@ -257,6 +302,8 @@
 @media screen and (max-width:768px){
     .colorSwiper-mainImg{
         margin-top: 190px;
+        height: 450px;
+        overflow: hidden;
     }
     .colorSwiper-subImg{
         display: none !important;
@@ -286,6 +333,11 @@
         position: relative;
     }
 }
+@media screen and (max-width:440px){
+    .colorSwiper-mainImg{
+        margin-top: 210px;
+    }
+}
 @media screen and (max-width:420px){
     .colorSwiper-mainImg{
         margin-top: 180px;
@@ -312,5 +364,10 @@
         height: 170px;
         overflow: hidden;
         align-items: center !important;
+    }
+}
+@media screen and (max-width:378px){
+    .colorSwiper-mainImg{
+        margin-top: 200px;
     }
 }

@@ -15,6 +15,19 @@ a {
 .mini_logo img{
   height: 100%;
 }
+.mini_logo-mobile{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height:30px;
+  margin: 22px 20px 20px 0; 
+}
+.mini_logo-mobile img{
+  height: 100%;
+}
+
+
 
 /* 헤더 메인 백그라운드 */
 .wrap .header-wrap .main-section {
@@ -348,6 +361,9 @@ a {
   .header-menu{
     display: none;
   }
+  .mini_logo-mobile{
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrap .header-wrap .main-section .menu-hover:hover {
@@ -362,7 +378,9 @@ a {
   .menu-hover:hover button > i {
     color: rgb(0, 0, 0);
   }
-
+  .login-icon-hidden{
+    display: none;
+  }
   .menu-hover{
     padding: 0 30px;
   }
