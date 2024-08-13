@@ -11,6 +11,8 @@ window.onload = function(){
     
     // 모바일 헤더 메뉴 영역
     // 메뉴
+    // 모바일 헤더 메뉴 영역
+    // 메뉴
     const mBt = this.document.querySelector(".m-menuBt");
     const mMenu = this.document.querySelector(".m-menu");
     const htmlRoot = this.document.querySelector("html");
@@ -70,6 +72,14 @@ window.onload = function(){
             menuHover.classList.remove("white-fixed");
             mainLogo.classList.remove("logo-margin");
             event.stopPropagation();
+        }
+        if(!cartList.contains(event.target) && !cartBt.contains(event.target) &&!menuHover.contains(event.target)){
+            cartList.classList.remove("c-menuActive");
+            btBlur.classList.remove("bt-blur");
+        }
+        if(!mMenu.contains(event.target) && !mBt.contains(event.target) &&!menuHover.contains(event.target)){
+            mMenu.classList.remove("m-menuActive");
+            btBlur.classList.remove("bt-blur");
         }
     });
 

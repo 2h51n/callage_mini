@@ -73,6 +73,14 @@ window.onload = function(){
             mainLogo.classList.remove("logo-margin");
             event.stopPropagation();
         }
+        if(!cartList.contains(event.target) && !cartBt.contains(event.target) &&!menuHover.contains(event.target)){
+            cartList.classList.remove("c-menuActive");
+            btBlur.classList.remove("bt-blur");
+        }
+        if(!mMenu.contains(event.target) && !mBt.contains(event.target) &&!menuHover.contains(event.target)){
+            mMenu.classList.remove("m-menuActive");
+            btBlur.classList.remove("bt-blur");
+        }
     });
 
     //카트(장바구니)
@@ -113,105 +121,109 @@ window.onload = function(){
     });
 
 
-    let currentIndex = 0;
-    let slides = document.querySelectorAll(".colorSwiper-mainImg img");
-    let slidesSub1 = document.querySelectorAll(".colorSwiper-subImg .cssi-1 img");
-    let slidesSub2 = document.querySelectorAll(".colorSwiper-subImg .cssi-2 img");
-
-    function showSlide(index) {
-        // console.log(index);
-        slides.forEach(function (slide) {
-          //   console.log(slide);
-        slide.classList.remove("active");
-        });
-        slides[index].classList.add("active");
-        }
-
-    function showSlideSub1(index) {
-        // console.log(index);
-        slidesSub1.forEach(function (slidesub1) {
-          //   console.log(slide);
-        slidesub1.classList.remove("active1");
-        });
-        slidesSub1[index].classList.add("active1");
-        }
-    function showSlideSub2(index) {
-        // console.log(index);
-        slidesSub2.forEach(function (slidesub2) {
-          //   console.log(slide);
-        slidesub2.classList.remove("active2");
-        });
-        slidesSub2[index].classList.add("active2");
-        }
-
-        // function prevSlide() {
-        //     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        //     console.log(currentIndex);
-        //     showSlide(currentIndex);
-        //     };
-        function nextSlide() {
-            currentIndex = (currentIndex + 1 ) % slides.length;
-            // console.log(currentIndex);
-            showSlide(currentIndex);
-            showSlideSub1(currentIndex);
-            showSlideSub2(currentIndex);
-            
-            }
-        function autoSlide() {
-            nextSlide();
-            setTimeout(autoSlide , 3000)
-            };
-
-        showSlide(currentIndex);
-        showSlideSub1(currentIndex);
-        showSlideSub2(currentIndex);
-        autoSlide();
 
 
-        // 컬러버튼 이벤트
-        const red = document.querySelector("#red");
-        const white = document.querySelector("#white");
-        const yellow = document.querySelector("#yellow");
-        const blue = document.querySelector("#blue");
-        const black = document.querySelector("#black");
-        // 슬라이드 함수
-        const redImg = document.querySelectorAll(".redImgs")
-        const whiteImg = document.querySelectorAll(".whiteImgs")
-        const yellowImg = document.querySelectorAll(".yellowImgs")
-        const blueImg = document.querySelectorAll(".blueImgs")
-        const blackImg = document.querySelectorAll(".blackImgs")
-        function hideAllImages() {
-            redImg.forEach(img => img.style.display = "none");
-            whiteImg.forEach(img => img.style.display = "none");
-            yellowImg.forEach(img => img.style.display = "none");
-            blueImg.forEach(img => img.style.display = "none");
-            blackImg.forEach(img => img.style.display = "none");
-        }
-        
-        red.addEventListener("click", function() {
-            hideAllImages();
-            redImg.forEach(img => img.style.display = "block");
-        });
-        
-        white.addEventListener("click", function() {
-            hideAllImages();
-            whiteImg.forEach(img => img.style.display = "block");
-        });
-        
-        yellow.addEventListener("click", function() {
-            hideAllImages();
-            yellowImg.forEach(img => img.style.display = "block");
-        });
-        
-        blue.addEventListener("click", function() {
-            hideAllImages();
-            blueImg.forEach(img => img.style.display = "block");
-        });
-        
-        black.addEventListener("click", function() {
-            hideAllImages();
-            blackImg.forEach(img => img.style.display = "block");
-        });
+
+
+
+// 버튼 요소들 가져오기
+// 버튼 요소들 가져오기
+let currentIndex = 0;
+const buttons = document.querySelectorAll("#red, #white, #yellow, #blue, #black");
+
+// 슬라이드 이미지 그룹 선택
+const redImg = document.querySelectorAll(".redImgs");
+const whiteImg = document.querySelectorAll(".whiteImgs");
+const yellowImg = document.querySelectorAll(".yellowImgs");
+const blueImg = document.querySelectorAll(".blueImgs");
+const blackImg = document.querySelectorAll(".blackImgs");
+
+// 현재 색상 및 인덱스 추적
+let currentColor = 'red'; // 초기 색상 설정
+// 모든 이미지를 숨기는 함수
+function hideAllImages() {
+    redImg.forEach(img => img.classList.remove("color-active"));
+    whiteImg.forEach(img => img.classList.remove("color-active"));
+    yellowImg.forEach(img => img.classList.remove("color-active"));
+    blueImg.forEach(img => img.classList.remove("color-active"));
+    blackImg.forEach(img => img.classList.remove("color-active"));
+}
+
+// 모든 버튼에서 button-width 클래스를 제거하는 함수
+function removeButtonClass() {
+    buttons.forEach(button => button.classList.remove("button-width"));
+}
+
+// 각 색상에 대한 슬라이드를 보여주는 함수 (클래스를 추가)
+function showSlideForColor(color) {
+    hideAllImages(); // 모든 이미지를 숨깁니다.
+    
+    const imgGroup = {
+        red: redImg,
+        white: whiteImg,
+        yellow: yellowImg,
+        blue: blueImg,
+        black: blackImg
+    };
+    
+    const images = imgGroup[color];
+    images.forEach(img => img.classList.add("color-active"));
+}
+
+// 슬라이드와 버튼을 업데이트하는 함수
+function updateSlides() {
+    showSlideForColor(currentColor); // 현재 색상에 맞는 슬라이드를 표시합니다
+}
+
+// 버튼 상태를 업데이트하는 함수
+function showSlideBtn(index) {
+    removeButtonClass(); // 모든 버튼에서 클래스 제거
+    buttons[index].classList.add("button-width"); // 현재 버튼에 클래스 추가
+}
+
+// 자동 슬라이드를 위한 함수
+function nextSlide() {
+    const imgGroup = {
+        red: redImg,
+        white: whiteImg,
+        yellow: yellowImg,
+        blue: blueImg,
+        black: blackImg
+    };
+    
+    const images = imgGroup[currentColor];
+    currentIndex = (currentIndex + 1) % images.length; // 인덱스 증가
+    updateSlides(); // 슬라이드 업데이트
+    showSlideBtn(Array.from(buttons).findIndex(button => button.id === currentColor));
+}
+
+// 자동 슬라이드를 시작하는 함수
+function autoSlide() {
+    nextSlide();
+    setTimeout(autoSlide, 3000); // 3초마다 슬라이드 변경
+}
+
+// 초기 상태 설정 및 자동 슬라이드 시작
+function initialize() {
+    updateSlides(); // 초기 슬라이드 업데이트
+    autoSlide(); // 자동 슬라이드 시작
+    showSlideBtn(Array.from(buttons).findIndex(button => button.id === currentColor)); // 초기 버튼 상태 설정
+}
+
+// 버튼 클릭 이벤트 핸들러 설정
+buttons.forEach((button) => {
+    button.addEventListener("click", function() {
+        currentColor = this.id; // 클릭된 버튼의 색상으로 설정
+        currentIndex = 0; // 슬라이드를 첫 번째로 리셋
+        updateSlides(); // 슬라이드 업데이트
+        showSlideBtn(Array.from(buttons).indexOf(this)); // 버튼 상태 업데이트
+    });
+});
+
+// 초기화 함수 호출
+autoSlide();
+initialize(currentIndex);
+nextSlide();
 
     // 메뉴 2 슬라이드 영역
     const menu2 = new Swiper(".menu-2Img-wrap", {
