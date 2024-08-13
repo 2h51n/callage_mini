@@ -53,12 +53,12 @@
 
 /* .furniture_link_txt: 가구 링크 텍스트 */
 .furniture_link_txt {
-  display: inline-block; /* 패딩과 배경 사이즈를 올바르게 적용하기 위함 */
-  color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 */
+  letter-spacing: 0.1em; /* 문자 간격 설정 */
+  color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
   text-decoration: none; /* 기본 상태에서 밑줄 제거 */
-  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat; /* 밑줄 스타일 */
-  transition: background-size 0.3s ease-in-out; /* 부드러운 배경 사이즈 변화 */
-  padding: 5px 0; /* 수직 패딩으로 링크와 텍스트 간격 조정 */
+  background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 밑줄 배경 설정 */
+  transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 설정 */
+  padding: 5px 0; /* 수직 패딩 설정 */
 }
 
 /* .furniture_link_txt:hover: 링크에 커서를 올렸을 때 밑줄 효과 */
@@ -103,7 +103,7 @@
 /* 화면 너비가 768px 이하인 경우 (작은 타블렛 및 큰 스마트폰) */
 @media (max-width: 768px) {
   .furniture-text-wrap {
-    padding: 15px; /* 여백 추가 */
+    padding: 20px; /* 여백 추가 */
   }
 
   .furniture-text-wrap h2 {

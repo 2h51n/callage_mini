@@ -50,7 +50,7 @@
     letter-spacing: 0.09em;
 }
 .menu-2Text-wrap .sub_link_txt > a{
-    color: #000;
+    color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
 }
 .menu-2Text-wrap .sub_link_txt{
     width: 120px;

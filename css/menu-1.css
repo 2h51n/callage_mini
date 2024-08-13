@@ -77,7 +77,7 @@
     letter-spacing: 0.09em;
 }
 .colorSwiper-subText .sub_link_txt> a{
-    color: black;
+    color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
 }
 .colorSwiper-subText .sub_link_txt{
     width: 86px;
@@ -87,7 +87,7 @@
     font-size: 15px; /* 폰트 크기 설정 */
     line-height: 20px; /* 줄 높이 설정 */
     letter-spacing: 0.09em; /* 문자 간격 설정 */
-    color: rgba(0, 0, 0, 0.6); /* 텍스트 색상 설정 */
+    color: rgba(0, 0, 0, 0.6); /* 링크 색상 설정 */
     text-decoration: none; /* 기본 상태에서 밑줄 제거 */
     background: linear-gradient(to right, currentColor, currentColor) 0 100% / 100% 1px no-repeat; /* 배경 선의 위치 및 크기 설정 */
     transition: background-size 0.3s ease-in-out; /* 배경 사이즈 변화에 대한 부드러운 트랜지션 */
